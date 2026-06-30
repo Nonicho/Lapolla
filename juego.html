@@ -1,0 +1,2822 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>LA POLLA 🎰</title>
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="La Polla">
+<meta name="theme-color" content="#080808">
+<link rel="apple-touch-icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAgMTIwIj48cmVjdCB3aWR0aD0iMTIwIiBoZWlnaHQ9IjEyMCIgcng9IjI0IiBmaWxsPSIjMDgwODA4Ii8+PHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjExNiIgaGVpZ2h0PSIxMTYiIHJ4PSIyMiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjYzlhODRjIiBzdHJva2Utd2lkdGg9IjIiLz48dGV4dCB4PSI2MCIgeT0iNTgiIGZvbnQtc2l6ZT0iNDIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGRvbWluYW50LWJhc2VsaW5lPSJtaWRkbGUiPvCfjrA8L3RleHQ+PHRleHQgeD0iNjAiIHk9Ijk0IiBmb250LWZhbWlseT0iQXJpYWwsc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNjOWE4NGMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGxldHRlci1zcGFjaW5nPSIzIj5QT0xMQTwvdGV4dD48L3N2Zz4=">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:wght@400;700;900&family=Lato:wght@400;700;900&family=Share+Tech+Mono&display=swap');
+
+/* ══════════════════════════════════════
+   TEMAS DE COLOR
+══════════════════════════════════════ */
+:root {
+  --bg:#080808; --bg2:#111111; --surface:#181818; --surface2:#202020;
+  --border:#2a2a2a; --border2:#3a3a3a;
+  --gold:#c9a84c; --gold2:#e8c96a; --gold3:#8a6f2e; --gold-dim:#4a3c18; --gold-lt:#f5e4a0;
+  --red:#7a1515; --red2:#9a1c1c;
+  --cream:#f0e6cc; --cream2:#d4c9a8;
+  --text:#e8dcc8; --text-mid:#907860; --text-dim:#4a4030;
+  --acc:#c9a84c; --acc2:#e8c96a; --acc3:#8a6f2e;
+  --shadow:0 2px 20px rgba(0,0,0,0.8); --shadow-lg:0 6px 40px rgba(0,0,0,0.9);
+  --gold-glow:0 0 12px rgba(201,168,76,0.25);
+}
+body.tema-verde {
+  --bg:#071a0e; --bg2:#0d2416; --surface:#10301e; --surface2:#163d28;
+  --border:#1e4a2e; --border2:#2a6040;
+  --acc:#4caf7a; --acc2:#6dd69a; --acc3:#2e7a50;
+  --gold:#4caf7a; --gold2:#6dd69a; --gold3:#2e7a50; --gold-dim:#1a4a30; --gold-lt:#b0f0cc;
+  --text:#d0f0e0; --text-mid:#5a9a70; --text-dim:#2a5a3a;
+  --cream:#d0f0e0; --cream2:#a0d0b0;
+}
+body.tema-azul {
+  --bg:#060c1a; --bg2:#0d1526; --surface:#101e38; --surface2:#16284a;
+  --border:#1e2e50; --border2:#2a3e68;
+  --acc:#4a7fd4; --acc2:#6a9ff4; --acc3:#2a5faa;
+  --gold:#4a7fd4; --gold2:#6a9ff4; --gold3:#2a5faa; --gold-dim:#1a3060; --gold-lt:#b0d0ff;
+  --text:#d0e0ff; --text-mid:#5070a0; --text-dim:#2a3860;
+  --cream:#d0e0ff; --cream2:#a0b8e0;
+}
+body.tema-moderna {
+  --bg:#15171c; --bg2:#1c1f26; --surface:#1e2128; --surface2:#262b34;
+  --border:#262a33; --border2:#323845;
+  --acc:#4fd1c5; --acc2:#7ee8de; --acc3:#2f9b91;
+  --gold:#4fd1c5; --gold2:#7ee8de; --gold3:#2f9b91; --gold-dim:#1c3d3a; --gold-lt:#b8f0ea;
+  --text:#e7ebf0; --text-mid:#7d8794; --text-dim:#454a52;
+  --cream:#e7ebf0; --cream2:#aeb6c2;
+}
+body.tema-vibrante {
+  --bg:#1f1029; --bg2:#271333; --surface:#311a40; --surface2:#3d2350;
+  --border:#4a2a5c; --border2:#5c3672;
+  --acc:#ff8c42; --acc2:#ffd23f; --acc3:#9b5de5;
+  --gold:#ff8c42; --gold2:#ffd23f; --gold3:#9b5de5; --gold-dim:#5c3414; --gold-lt:#ffd9b3;
+  --text:#f3e8ff; --text-mid:#b89ed1; --text-dim:#6b5380;
+  --cream:#f3e8ff; --cream2:#d8c2ee;
+}
+
+/* ══════════════════════════════════════
+   TAMAÑOS — Base grande para público 40+
+══════════════════════════════════════ */
+body { font-size:20px; }
+body.vista-compacta { font-size:15px; }
+body.vista-grande   { font-size:25px; }
+body.vista-enorme   { font-size:32px; }
+
+/* GRILLA DE NÚMEROS — base grande */
+.nc { font-size:17px !important; }
+body.vista-compacta .nc { font-size:13px !important; }
+body.vista-grande   .nc { font-size:24px !important; padding:6px !important; }
+body.vista-enorme   .nc { font-size:30px !important; padding:8px !important; }
+
+/* La grilla pasa de 10 a menos columnas en modos grandes,
+   para que cada celda tenga ancho real y no se desborde
+   fuera de la pantalla cuando el número crece. */
+body.vista-grande .num-grid { grid-template-columns: repeat(6, 1fr); gap:6px; }
+body.vista-enorme .num-grid { grid-template-columns: repeat(5, 1fr); gap:7px; }
+
+/* NÚMEROS DEL TABLERO */
+.pn { font-size:20px !important; padding:8px 13px !important; }
+body.vista-compacta .pn { font-size:14px !important; padding:4px 8px !important; }
+body.vista-grande   .pn { font-size:26px !important; padding:11px 17px !important; }
+body.vista-enorme   .pn { font-size:32px !important; padding:14px 22px !important; }
+
+/* BOTONES */
+.btn:not(.btn-sm) { font-size:18px !important; padding:16px !important; }
+body.vista-compacta .btn { font-size:14px !important; padding:11px !important; }
+body.vista-grande   .btn { font-size:22px !important; padding:20px !important; }
+body.vista-enorme   .btn { font-size:26px !important; padding:24px !important; }
+
+/* TÍTULOS */
+.card-title { font-size:32px !important; }
+body.vista-compacta .card-title { font-size:24px !important; }
+body.vista-grande   .card-title { font-size:40px !important; }
+body.vista-enorme   .card-title { font-size:50px !important; }
+
+/* NOMBRES EN TABLERO */
+.pc-name { font-size:22px !important; }
+body.vista-grande   .pc-name { font-size:28px !important; }
+body.vista-enorme   .pc-name { font-size:34px !important; }
+
+/* CHIPS SELECCIONADOS */
+.sel-chip { font-size:20px !important; padding:8px 16px !important; }
+body.vista-grande   .sel-chip { font-size:24px !important; padding:11px 20px !important; }
+body.vista-enorme   .sel-chip { font-size:28px !important; padding:14px 24px !important; }
+
+/* INPUTS */
+.field input { font-size:22px !important; padding:16px !important; }
+body.vista-compacta .field input { font-size:16px !important; padding:12px !important; }
+body.vista-grande   .field input { font-size:26px !important; padding:18px !important; }
+body.vista-enorme   .field input { font-size:30px !important; padding:22px !important; }
+
+/* CONTADOR */
+.counter-text { font-size:18px !important; }
+body.vista-grande   .counter-text { font-size:22px !important; }
+body.vista-enorme   .counter-text { font-size:26px !important; }
+
+/* TABS */
+.tab { font-size:16px !important; padding:16px 6px !important; }
+body.vista-grande .tab { font-size:19px !important; }
+body.vista-enorme .tab { font-size:22px !important; }
+
+* { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+body {
+  background:var(--bg); color:var(--text);
+  font-family:'Lato',sans-serif; font-size:18px;
+  min-height:100vh; overflow-x:hidden;
+  -webkit-user-select:none; user-select:none;
+  transition: background 0.4s, color 0.4s;
+}
+body::before {
+  content:''; position:fixed; inset:0;
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,0.008) 0px,rgba(255,255,255,0.008) 1px,transparent 1px,transparent 60px),repeating-linear-gradient(90deg,rgba(255,255,255,0.004) 0px,rgba(255,255,255,0.004) 1px,transparent 1px,transparent 60px);
+  pointer-events:none; z-index:0;
+}
+body::after {
+  content:''; position:fixed; inset:0;
+  background:radial-gradient(ellipse 60% 30% at 50% 0%,rgba(201,168,76,0.07) 0%,transparent 55%);
+  pointer-events:none; z-index:0;
+}
+.app { position:relative; z-index:1; max-width:680px; margin:0 auto; padding:0 16px 80px; }
+
+/* HEADER */
+header { text-align:center; padding:28px 0 18px; border-bottom:1px solid var(--border); margin-bottom:22px; }
+.gold-line { height:2px; background:linear-gradient(90deg,transparent,var(--gold-dim),var(--gold),var(--gold2),var(--gold),var(--gold-dim),transparent); margin-bottom:24px; }
+.gold-line-sm { height:1px; background:linear-gradient(90deg,transparent,var(--gold-dim),var(--gold-dim),transparent); margin:0 auto; max-width:200px; margin-top:12px; }
+.logo { font-family:'Bebas Neue',cursive; font-size:clamp(80px,22vw,120px); font-weight:400; color:var(--gold); line-height:1; letter-spacing:12px; text-shadow:0 2px 4px rgba(0,0,0,1),0 0 30px rgba(201,168,76,0.2); }
+.logo-sub { font-family:'Share Tech Mono',monospace; font-size:13px; letter-spacing:5px; color:var(--text-dim); text-transform:uppercase; margin-top:8px; }
+.ornament { display:flex; align-items:center; gap:10px; margin:10px auto 0; max-width:240px; }
+.orn-line { flex:1; height:1px; background:linear-gradient(90deg,transparent,var(--gold-dim)); }
+.orn-line.right { background:linear-gradient(90deg,var(--gold-dim),transparent); }
+.orn-diamond { color:var(--gold-dim); font-size:13px; }
+.pozo-strip { display:inline-flex; align-items:center; gap:18px; margin-top:16px; background:var(--surface); border-top:1px solid var(--gold3); border-bottom:1px solid var(--gold3); border-left:none; border-right:none; padding:12px 28px; box-shadow:var(--shadow); }
+.pozo-label { font-family:'Share Tech Mono',monospace; font-size:12px; letter-spacing:5px; color:var(--text-dim); text-transform:uppercase; }
+.pozo-value { font-family:'Playfair Display',serif; font-size:36px; font-weight:700; color:var(--gold); text-shadow:0 0 10px rgba(201,168,76,0.2); }
+#syncIndicator { margin-top:6px; font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--text-dim); letter-spacing:2px; }
+
+/* TABS */
+.tabs { display:flex; gap:2px; margin:0 0 22px; background:var(--surface); border:1px solid var(--border); border-radius:2px; padding:3px; box-shadow:var(--shadow); }
+.tab { flex:1; padding:16px 6px; text-align:center; font-family:'Lato',sans-serif; font-size:15px; font-weight:700; letter-spacing:0.5px; color:var(--text-mid); border-radius:2px; cursor:pointer; transition:all 0.2s; user-select:none; position:relative; }
+.tab:hover { color:var(--cream); background:var(--surface2); }
+.tab.active { background:var(--surface2); color:var(--gold); border-bottom:2px solid var(--gold); text-shadow:0 0 8px rgba(201,168,76,0.3); }
+.tab .notif { position:absolute; top:6px; right:8px; min-width:20px; height:20px; border-radius:10px; background:var(--red2); border:1px solid #c03030; display:flex; align-items:center; justify-content:center; font-family:'Share Tech Mono',monospace; font-size:11px; color:#fff; font-weight:700; animation:badgePulse 1.5s ease-in-out 2; padding:0 4px; }
+.tab .notif.notif-flash { animation:badgePulse 0.45s ease-in-out 4; }
+@keyframes badgePulse { 0%,100%{transform:scale(1);box-shadow:0 0 0 rgba(154,28,28,0)} 50%{transform:scale(1.15);box-shadow:0 0 8px rgba(154,28,28,0.6)} }
+#tab-admin { display:none; }
+#tab-admin.visible { display:flex; align-items:center; justify-content:center; }
+
+/* PANELS */
+.panel { display:none; }
+.panel.active { display:block; animation:panelIn 0.3s ease; }
+@keyframes panelIn { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+/* INSTRUCCIONES */
+.instrucciones { background:var(--surface); border:1px solid var(--border); border-top:2px solid var(--gold3); border-radius:4px; padding:26px 20px; margin-bottom:18px; box-shadow:var(--shadow); }
+.instr-titulo { font-family:'Bebas Neue',cursive; font-size:40px; color:var(--gold); text-align:center; letter-spacing:4px; margin-bottom:4px; }
+.instr-subtitulo { font-family:'Share Tech Mono',monospace; font-size:13px; color:var(--text-dim); text-align:center; letter-spacing:3px; text-transform:uppercase; margin-bottom:20px; padding-bottom:14px; border-bottom:1px solid var(--border); }
+.paso { display:flex; gap:14px; align-items:flex-start; margin-bottom:13px; padding:16px; background:var(--bg2); border-left:3px solid var(--gold3); border-radius:2px; }
+.paso-num { font-family:'Bebas Neue',cursive; font-size:42px; color:var(--gold3); line-height:1; flex-shrink:0; min-width:40px; text-align:center; }
+.paso-emoji { font-size:26px; display:block; margin-bottom:4px; }
+.paso-titulo { font-family:'Playfair Display',serif; font-size:22px; font-weight:900; color:var(--cream); margin-bottom:4px; }
+.paso-desc { font-size:17px; color:var(--text-mid); line-height:1.7; }
+.paso-desc strong { color:var(--gold); } .paso-desc em { color:var(--cream2); font-style:normal; font-weight:700; }
+.aviso { display:flex; gap:12px; align-items:flex-start; background:rgba(122,21,21,0.15); border:1px solid var(--red2); border-radius:4px; padding:16px; margin-top:14px; }
+.aviso-icon { font-size:26px; flex-shrink:0; }
+.aviso-texto { font-size:17px; color:var(--text-mid); line-height:1.7; }
+.aviso-texto strong { color:var(--gold); }
+
+/* CARDS */
+.card { background:var(--surface); border:1px solid var(--border); border-top:2px solid var(--gold3); border-radius:4px; padding:22px 20px; margin-bottom:14px; box-shadow:var(--shadow); }
+.card-title { font-family:'Bebas Neue',cursive; font-size:32px; color:var(--gold); letter-spacing:3px; margin-bottom:4px; }
+.card-sub { font-size:16px; color:var(--text-dim); margin-bottom:16px; line-height:1.6; }
+
+/* FIELDS */
+.field { margin-bottom:16px; }
+.field label { display:block; font-family:'Share Tech Mono',monospace; font-size:13px; letter-spacing:3px; text-transform:uppercase; color:var(--text-dim); margin-bottom:7px; }
+.field input { width:100%; padding:16px 17px; background:var(--bg2); border:1px solid var(--border); border-radius:3px; color:var(--cream); font-family:'Lato',sans-serif; font-size:20px; font-weight:700; outline:none; transition:all 0.2s; -webkit-user-select:text; user-select:text; }
+.field input:focus { border-color:var(--gold3); background:var(--surface2); box-shadow:0 0 0 2px rgba(138,111,46,0.2); }
+.field input::placeholder { color:var(--text-dim); font-weight:400; }
+
+/* NUMBER GRID */
+.grid-label { font-family:'Share Tech Mono',monospace; font-size:11px; letter-spacing:3px; text-transform:uppercase; color:var(--text-dim); margin-bottom:8px; }
+.selected-strip { display:flex; flex-wrap:wrap; gap:5px; min-height:48px; padding:9px 11px; background:var(--bg2); border:1px solid var(--border); border-radius:3px; margin-bottom:9px; align-items:center; }
+.sel-chip { font-family:'Share Tech Mono',monospace; font-size:15px; font-weight:700; padding:5px 12px; background:var(--gold-dim); color:var(--gold2); border:1px solid var(--gold3); border-radius:2px; cursor:pointer; transition:all 0.15s; }
+.sel-chip:hover { background:var(--red); color:var(--cream); border-color:var(--red2); transform:scale(0.95); }
+.strip-placeholder { font-size:13px; color:var(--text-dim); font-style:italic; }
+.counter-row { display:flex; justify-content:space-between; align-items:center; margin-bottom:9px; }
+.counter-text { font-family:'Share Tech Mono',monospace; font-size:13px; color:var(--text-dim); }
+.counter-text strong { color:var(--gold); font-size:16px; }
+
+.num-grid { display:grid; grid-template-columns:repeat(10,1fr); gap:3px; margin-bottom:16px; }
+.nc {
+  aspect-ratio:1; display:flex; align-items:center; justify-content:center;
+  font-family:'Share Tech Mono',monospace; font-size:14px; font-weight:700;
+  border:1px solid var(--border); border-radius:2px; cursor:pointer;
+  background:var(--bg2); color:var(--text-dim);
+  transition:all 0.12s; user-select:none; position:relative;
+}
+.nc:hover { background:var(--surface2); color:var(--gold2); border-color:var(--gold-dim); transform:scale(1.06); }
+.nc.picked { background:var(--gold-dim); color:var(--gold2); border-color:var(--gold3); box-shadow:0 0 6px rgba(201,168,76,0.2); }
+.nc .badge { position:absolute; top:-5px; right:-5px; background:var(--gold); color:#000; font-size:9px; font-weight:900; border-radius:50%; width:16px; height:16px; display:flex; align-items:center; justify-content:center; }
+.nc.drawn-d1 { background:rgba(201,168,76,0.12); border-color:var(--gold3); color:var(--gold); }
+.nc.drawn-d2 { background:rgba(180,140,60,0.15); border-color:var(--gold); color:var(--gold2); }
+.nc.drawn-d3 { background:rgba(122,21,21,0.2); border-color:var(--red2); color:#e08080; }
+.nc.drawn-win { background:var(--gold3); color:#000; border-color:var(--gold); }
+
+/* BUTTONS */
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:7px; padding:14px 22px; font-family:'Lato',sans-serif; font-size:15px; font-weight:700; font-style:normal; letter-spacing:0.5px; border:none; border-radius:2px; cursor:pointer; transition:all 0.18s; }
+.btn-gold { background:var(--gold-dim); color:var(--gold2); border:1px solid var(--gold3); box-shadow:var(--shadow); }
+.btn-gold:hover { background:var(--gold3); color:var(--cream); transform:translateY(-1px); box-shadow:var(--gold-glow); }
+.btn-gold:disabled { background:var(--border); color:var(--text-dim); cursor:not-allowed; transform:none; box-shadow:none; }
+.btn-crimson { background:var(--red); color:var(--cream); border:1px solid var(--red2); box-shadow:var(--shadow); }
+.btn-crimson:hover { background:var(--red2); transform:translateY(-1px); }
+.btn-violet { background:var(--surface2); color:var(--gold); border:1px solid var(--gold3); }
+.btn-violet:hover { background:var(--gold-dim); color:var(--gold2); transform:translateY(-1px); }
+.btn-dark { background:var(--bg); color:var(--gold3); border:1px solid var(--border); }
+.btn-dark:hover { border-color:var(--gold3); color:var(--gold); }
+.btn-accent { background:var(--gold-dim); color:var(--gold2); border:1px solid var(--gold3); font-weight:bold; }
+.btn-accent:hover { background:var(--gold3); color:var(--bg); }
+.btn-clean { font-family:'Lato',sans-serif; font-style:normal; letter-spacing:0.5px; }
+.btn-sm { padding:7px 13px; font-size:12px; }
+.btn-full { width:100%; }
+
+/* ALERT */
+.alert { padding:11px 15px; border-radius:3px; font-size:14px; font-weight:700; margin-bottom:13px; display:none; }
+.alert.show { display:block; animation:panelIn 0.3s ease; }
+.alert-err { background:rgba(122,21,21,0.2); border:1px solid var(--red2); color:#e08080; }
+.alert-ok  { background:rgba(138,111,46,0.15); border:1px solid var(--gold3); color:var(--gold2); }
+
+/* PLAYER CARDS */
+.player-list { display:flex; flex-direction:column; gap:11px; }
+.player-card { background:var(--surface); border:1px solid var(--border); border-left:4px solid var(--gold3); border-radius:3px; padding:14px; transition:all 0.3s; box-shadow:var(--shadow); }
+.player-card.winner-p { border-color:var(--gold); border-left-color:var(--gold); box-shadow:0 0 20px rgba(201,168,76,0.15),var(--shadow-lg); background:linear-gradient(160deg,rgba(201,168,76,0.04),var(--surface)); }
+.pc-top { display:flex; align-items:center; gap:11px; margin-bottom:11px; }
+.pc-avatar { width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',cursive; font-size:18px; flex-shrink:0; border:2px solid; }
+.av-active { background:var(--gold-dim); border-color:var(--gold3); color:var(--gold2); }
+.av-winner { background:var(--gold3); border-color:var(--gold2); color:#000; box-shadow:var(--gold-glow); }
+.pc-info { flex:1; min-width:0; }
+.pc-name { font-family:'Playfair Display',serif; font-size:20px; font-weight:900; color:var(--cream); }
+.pc-status { font-family:'Share Tech Mono',monospace; font-size:11px; letter-spacing:2px; margin-top:3px; }
+.st-active { color:var(--text-mid); } .st-winner { color:var(--gold); }
+.pc-score { text-align:center; flex-shrink:0; min-width:50px; }
+.pc-score-num { font-family:'Bebas Neue',cursive; font-size:40px; line-height:1; color:var(--gold); text-shadow:0 0 10px rgba(201,168,76,0.2); }
+.pc-score-den { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--text-dim); letter-spacing:2px; }
+.pc-nums { display:flex; flex-wrap:wrap; gap:4px; margin-bottom:7px; }
+.pn { font-family:'Share Tech Mono',monospace; font-size:16px; font-weight:700; padding:5px 10px; border-radius:2px; background:var(--bg2); border:1px solid var(--border); color:var(--text-dim); transition:all 0.2s; }
+.pn.h1 { background:rgba(201,168,76,0.1); border-color:var(--gold3); color:var(--gold); }
+.pn.h2 { background:rgba(201,168,76,0.15); border-color:var(--gold); color:var(--gold2); }
+.pn.h3 { background:rgba(122,21,21,0.15); border-color:var(--red2); color:#e08080; }
+.pn.hw { background:var(--gold3); color:#000; border:none; }
+.rank-bar-bg { height:4px; background:var(--bg); border-radius:2px; margin-top:5px; overflow:hidden; }
+.rank-bar-fill { height:100%; border-radius:2px; background:linear-gradient(90deg,var(--gold-dim),var(--gold)); transition:width 0.7s ease; }
+.pc-bet { font-family:'Share Tech Mono',monospace; font-size:11px; color:var(--text-dim); margin-top:4px; letter-spacing:1px; }
+
+/* ADMIN */
+.admin-lock { background:var(--surface); border:1px solid var(--gold3); border-top:3px solid var(--gold); border-radius:4px; padding:28px 20px; margin-bottom:18px; text-align:center; box-shadow:var(--shadow-lg); }
+.admin-lock h2 { font-family:'Bebas Neue',cursive; font-size:26px; color:var(--gold); margin-bottom:7px; letter-spacing:3px; }
+.admin-lock p { font-size:15px; color:var(--text-mid); margin-bottom:18px; line-height:1.5; }
+.admin-lock .field { text-align:left; }
+.pending-list { display:flex; flex-direction:column; gap:9px; margin-bottom:18px; }
+.pending-item { background:var(--bg2); border:1px solid var(--border); border-left:4px solid var(--gold3); border-radius:3px; padding:12px 14px; display:flex; align-items:center; gap:11px; }
+.pending-item-info { flex:1; }
+.pending-item-name { font-family:'Playfair Display',serif; font-size:18px; font-weight:700; color:var(--cream); }
+.pending-item-nums { font-family:'Share Tech Mono',monospace; font-size:11px; color:var(--text-dim); margin-top:3px; }
+.pending-actions { display:flex; gap:5px; flex-shrink:0; }
+
+/* SORTEO BALLS */
+.day-card { background:var(--surface); border:1px solid var(--border); border-radius:3px; padding:14px 16px; margin-bottom:11px; box-shadow:var(--shadow); }
+.day-hdr { display:flex; align-items:center; gap:9px; margin-bottom:11px; flex-wrap:wrap; }
+.day-pill { font-family:'Share Tech Mono',monospace; font-size:10px; letter-spacing:3px; padding:4px 11px; border-radius:2px; background:var(--gold-dim); color:var(--gold); font-weight:700; }
+.day-date-lbl { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--text-dim); }
+.day-tag-ok { margin-left:auto; font-family:'Share Tech Mono',monospace; font-size:10px; padding:3px 9px; border-radius:2px; background:rgba(138,111,46,0.12); border:1px solid var(--gold3); color:var(--gold); letter-spacing:2px; }
+.day-tag-no { margin-left:auto; font-family:'Share Tech Mono',monospace; font-size:10px; padding:3px 9px; border-radius:2px; background:rgba(60,50,20,0.3); border:1px solid var(--border); color:var(--text-dim); letter-spacing:2px; }
+.day-balls { display:flex; flex-wrap:wrap; gap:6px; }
+.ball { width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-family:'Share Tech Mono',monospace; font-size:13px; font-weight:700; border:1px solid; }
+.ball-d1 { background:rgba(201,168,76,0.1); border-color:var(--gold3); color:var(--gold); }
+.ball-d2 { background:rgba(201,168,76,0.15); border-color:var(--gold); color:var(--gold2); }
+.ball-d3 { background:rgba(122,21,21,0.12); border-color:var(--red2); color:#e08080; }
+.lottery-ref { display:flex; align-items:center; gap:9px; background:rgba(138,111,46,0.08); border:1px solid var(--gold-dim); border-radius:3px; padding:11px 13px; margin-bottom:13px; font-size:14px; color:var(--text-mid); }
+.lottery-ref a { color:var(--gold3); font-weight:700; text-decoration:none; }
+hr.sep { border:none; border-top:1px solid var(--border); margin:18px 0; }
+.empty { text-align:center; padding:32px 18px; color:var(--text-dim); font-size:14px; font-style:italic; }
+
+/* WINNER */
+.win-overlay { display:none; position:fixed; inset:0; background:rgba(2,2,2,0.97); z-index:200; align-items:center; justify-content:center; padding:22px; }
+.win-overlay.show { display:flex; animation:panelIn 0.5s ease; }
+.win-box { background:var(--surface); border:1px solid var(--gold); border-top:3px solid var(--gold2); border-radius:6px; padding:40px 28px; max-width:420px; width:100%; text-align:center; box-shadow:0 0 60px rgba(201,168,76,0.15),var(--shadow-lg); animation:winPop 0.6s cubic-bezier(0.34,1.56,0.64,1); }
+@keyframes winPop { from{transform:scale(0.6);opacity:0} to{transform:scale(1);opacity:1} }
+.win-trophy { font-size:68px; animation:trophyBounce 1.2s ease-in-out infinite alternate; display:block; }
+@keyframes trophyBounce { from{transform:translateY(0)} to{transform:translateY(-10px)} }
+.win-eyebrow { font-family:'Share Tech Mono',monospace; font-size:10px; letter-spacing:6px; color:var(--text-dim); text-transform:uppercase; margin:10px 0 4px; }
+.win-title   { font-family:'Bebas Neue',cursive; font-size:20px; letter-spacing:4px; color:var(--gold); margin-bottom:9px; }
+.win-name    { font-family:'Bebas Neue',cursive; font-size:clamp(44px,13vw,68px); color:var(--gold2); margin-bottom:7px; line-height:1.05; letter-spacing:3px; text-shadow:0 0 25px rgba(201,168,76,0.5); font-weight:900; word-break:break-word; }
+.win-detail  { font-family:'Share Tech Mono',monospace; font-size:11px; color:var(--text-dim); margin-bottom:18px; }
+.win-prize   {
+  font-family:'Playfair Display',serif; font-weight:900;
+  font-size:clamp(52px,15vw,76px);
+  color:#3df58a;
+  text-shadow:0 0 30px rgba(61,245,138,0.7), 0 0 60px rgba(61,245,138,0.3);
+  margin-bottom:6px;
+  animation:prizeGlow 1.6s ease-in-out infinite;
+}
+@keyframes prizeGlow {
+  0%,100%{ text-shadow:0 0 20px rgba(61,245,138,0.5), 0 0 40px rgba(61,245,138,0.2); }
+  50%{ text-shadow:0 0 45px rgba(61,245,138,0.9), 0 0 80px rgba(61,245,138,0.5); }
+}
+.win-prize-label { font-family:'Share Tech Mono',monospace; font-size:10px; color:var(--text-dim); letter-spacing:4px; text-transform:uppercase; margin-bottom:24px; }
+.confetti { position:fixed; opacity:0; animation:cf 4s ease-in forwards; z-index:201; }
+@keyframes cf { 0%{transform:translateY(-30px) rotate(0);opacity:1} 100%{transform:translateY(110vh) rotate(1080deg);opacity:0} }
+
+/* ══════════════════════════════════════
+   BANNER POZO ACUMULADO — FIJO ARRIBA
+══════════════════════════════════════ */
+.pozo-banner {
+  position:fixed; top:0; left:0; right:0; z-index:150;
+  background:linear-gradient(135deg,#0a0800,#1a1200,#0a0800);
+  border-bottom:2px solid var(--gold3);
+  padding:8px 16px;
+  display:flex; align-items:center; justify-content:space-between;
+  box-shadow:0 2px 20px rgba(0,0,0,0.9);
+}
+.pozo-banner-label {
+  font-family:'Share Tech Mono',monospace; font-size:10px;
+  letter-spacing:4px; color:var(--text-dim); text-transform:uppercase;
+}
+.pozo-banner-monto {
+  font-family:'Bebas Neue',cursive; font-size:clamp(38px,11vw,58px);
+  color:#3df58a; letter-spacing:3px;
+  animation:pozoPulse 2s ease-in-out infinite;
+  text-shadow:0 0 25px rgba(61,245,138,0.6);
+}
+@keyframes pozoPulse {
+  0%,100%{ text-shadow:0 0 15px rgba(61,245,138,0.5); transform:scale(1); }
+  50%{ text-shadow:0 0 40px rgba(61,245,138,0.9),0 0 70px rgba(61,245,138,0.4); transform:scale(1.04); }
+}
+.pozo-banner-icon { font-size:28px; animation:iconSpin 4s linear infinite; }
+@keyframes iconSpin { 0%{transform:rotate(0)} 100%{transform:rotate(360deg)} }
+.app { padding-top:70px; }
+
+/* ══════════════════════════════════════
+   COUNTDOWN REGRESIVO
+══════════════════════════════════════ */
+.countdown-bar {
+  background:var(--surface); border:1px solid var(--border);
+  border-top:2px solid var(--red2); border-radius:3px;
+  padding:14px 16px; margin-bottom:14px;
+  display:flex; align-items:center; justify-content:space-between;
+  box-shadow:var(--shadow);
+}
+.countdown-label {
+  font-family:'Share Tech Mono',monospace; font-size:12px;
+  color:var(--text-dim); letter-spacing:2px;
+}
+.countdown-timer {
+  font-family:'Bebas Neue',cursive; font-size:clamp(32px,8vw,48px);
+  color:var(--gold); letter-spacing:4px; line-height:1;
+  transition:color 0.3s;
+}
+.countdown-timer.urgente { color:#ff4444; animation:timerPulse 0.5s ease-in-out infinite; }
+@keyframes timerPulse { 0%,100%{opacity:1} 50%{opacity:0.4} }
+.countdown-config {
+  display:flex; gap:8px; align-items:center; margin-top:10px; flex-wrap:wrap;
+}
+.countdown-config input {
+  width:80px; padding:8px 10px; background:var(--bg2);
+  border:1px solid var(--border); border-radius:3px;
+  color:var(--cream); font-family:'Share Tech Mono',monospace;
+  font-size:16px; text-align:center; -webkit-user-select:text; user-select:text;
+}
+
+/* ══════════════════════════════════════
+   EFECTO GANADOR — FONDO ÉPICO
+══════════════════════════════════════ */
+body.winner-mode {
+  animation:winnerBg 0.8s ease forwards;
+}
+@keyframes winnerBg {
+  0%{ background:#080808; }
+  100%{ background:radial-gradient(ellipse at center,#1a1400 0%,#080808 70%); }
+}
+.win-overlay.show {
+  background:radial-gradient(ellipse at center,rgba(201,168,76,0.15) 0%,rgba(2,2,2,0.97) 60%);
+}
+.win-box {
+  animation:winPop 0.6s cubic-bezier(0.34,1.56,0.64,1), winGlow 2s ease-in-out 0.6s infinite alternate !important;
+}
+@keyframes winGlow {
+  from{ box-shadow:0 0 30px rgba(201,168,76,0.2),0 6px 40px rgba(0,0,0,0.9); }
+  to{ box-shadow:0 0 80px rgba(201,168,76,0.5),0 6px 40px rgba(0,0,0,0.9); }
+}
+/* Confetti mejorado */
+.confetti { position:fixed; pointer-events:none; z-index:202; }
+.cf-piece {
+  position:fixed; pointer-events:none; z-index:202;
+  animation:cfFall linear forwards;
+}
+@keyframes cfFall {
+  0%{ transform:translateY(-20px) rotate(0deg) scale(1); opacity:1; }
+  80%{ opacity:1; }
+  100%{ transform:translateY(110vh) rotate(720deg) scale(0.5); opacity:0; }
+}
+.toast { position:fixed; bottom:22px; left:50%; transform:translateX(-50%); background:var(--surface2); border:1px solid var(--gold3); border-left:4px solid var(--gold); border-radius:3px; padding:13px 18px; font-family:'Share Tech Mono',monospace; font-size:12px; color:var(--gold2); letter-spacing:1px; box-shadow:var(--shadow-lg); z-index:300; white-space:nowrap; opacity:0; animation:toastIn 0.3s ease forwards; max-width:90vw; text-align:center; }
+@keyframes toastIn { from{opacity:0;transform:translateX(-50%) translateY(10px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
+.toast-big { position:fixed; top:20px; left:50%; transform:translateX(-50%); background:var(--surface2); border:2px solid var(--gold); border-radius:8px; padding:18px 24px; font-family:'Playfair Display',serif; font-size:17px; font-weight:700; color:var(--gold2); box-shadow:0 0 30px rgba(201,168,76,0.3),var(--shadow-lg); z-index:300; text-align:center; max-width:85vw; opacity:1; transition:opacity 0.4s; animation:toastBigIn 0.4s ease; }
+@keyframes toastBigIn { from{opacity:0;transform:translateX(-50%) translateY(-20px)} to{opacity:1;transform:translateX(-50%) translateY(0)} }
+
+/* PREFERENCIAS */
+.pref-panel { background:var(--surface); border:1px solid var(--border); border-top:2px solid var(--gold3); border-radius:4px; padding:18px; margin-bottom:14px; }
+.pref-title { font-family:'Bebas Neue',cursive; font-size:20px; color:var(--gold); letter-spacing:3px; margin-bottom:12px; }
+.pref-row { display:flex; gap:7px; flex-wrap:wrap; margin-bottom:12px; }
+.pref-btn { padding:8px 14px; font-family:'Share Tech Mono',monospace; font-size:11px; letter-spacing:2px; border:1px solid var(--border); border-radius:2px; background:var(--bg2); color:var(--text-dim); cursor:pointer; transition:all 0.2s; }
+.pref-btn.active { border-color:var(--gold); color:var(--gold); background:var(--gold-dim); }
+
+/* ══════════════════════════════════════
+   🎰 CASINO EDITION — AGREGADOS v21
+══════════════════════════════════════ */
+
+/* ── LUCES AMBIENTALES DE CASINO ── */
+.casino-lights {
+  position:fixed; inset:0; pointer-events:none; z-index:0; overflow:hidden;
+}
+.casino-lights::before {
+  content:'';
+  position:absolute; inset:0;
+  background:
+    radial-gradient(ellipse 40% 20% at 0% 50%, rgba(201,168,76,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 20% at 100% 50%, rgba(201,168,76,0.04) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 15% at 50% 100%, rgba(122,21,21,0.06) 0%, transparent 60%);
+  animation: casinoAmbient 8s ease-in-out infinite alternate;
+}
+@keyframes casinoAmbient {
+  0%   { opacity:0.6; }
+  50%  { opacity:1; }
+  100% { opacity:0.6; }
+}
+
+/* ── CARTEL NEÓN DE CASINO ── */
+.casino-sign {
+  text-align:center;
+  font-family:'Bebas Neue',cursive;
+  font-size:11px; letter-spacing:6px;
+  color:var(--gold3);
+  text-transform:uppercase;
+  margin-top:6px;
+  animation: neonSign 3s ease-in-out infinite;
+}
+@keyframes neonSign {
+  0%,100% { opacity:0.5; text-shadow:none; }
+  50%     { opacity:1; text-shadow:0 0 8px var(--gold), 0 0 16px var(--gold3); }
+}
+
+/* ── FICHAS DE CASINO ── */
+.ficha {
+  display:inline-flex; align-items:center; justify-content:center;
+  width:44px; height:44px; border-radius:50%;
+  font-family:'Bebas Neue',cursive; font-size:14px; font-weight:700;
+  border:3px dashed; position:relative;
+  transition:all 0.2s; cursor:default; flex-shrink:0;
+}
+.ficha::before {
+  content:''; position:absolute; inset:3px;
+  border-radius:50%; border:2px solid rgba(255,255,255,0.15);
+}
+.ficha-gold  { background:radial-gradient(circle at 35% 35%, #f5e4a0, #8a6f2e); border-color:#c9a84c; color:#000; box-shadow:0 2px 8px rgba(201,168,76,0.4), inset 0 1px 2px rgba(255,255,255,0.3); }
+.ficha-red   { background:radial-gradient(circle at 35% 35%, #c04040, #5a1010); border-color:#9a1c1c; color:#fff; box-shadow:0 2px 8px rgba(122,21,21,0.4), inset 0 1px 2px rgba(255,255,255,0.2); }
+.ficha-black { background:radial-gradient(circle at 35% 35%, #444, #111); border-color:#3a3a3a; color:#c9a84c; box-shadow:0 2px 8px rgba(0,0,0,0.6), inset 0 1px 2px rgba(255,255,255,0.1); }
+.ficha-blue  { background:radial-gradient(circle at 35% 35%, #4060c0, #102060); border-color:#2a40a0; color:#fff; box-shadow:0 2px 8px rgba(40,60,160,0.4), inset 0 1px 2px rgba(255,255,255,0.2); }
+
+/* ── TAPETE DE CASINO (fondo de la grilla) ── */
+.casino-felt {
+  background: radial-gradient(ellipse at center, #0d2a0d 0%, #071a07 70%);
+  border: 2px solid #1a4a1a;
+  border-radius: 12px;
+  padding: 14px;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+  margin-bottom: 14px;
+  position: relative;
+}
+.casino-felt::before {
+  content: '';
+  position: absolute; inset: 6px;
+  border: 1px solid rgba(201,168,76,0.08);
+  border-radius: 8px;
+  pointer-events: none;
+}
+/* Grilla sobre el tapete */
+.casino-felt .num-grid .nc {
+  background: rgba(0,0,0,0.4) !important;
+  border-color: rgba(201,168,76,0.15) !important;
+  color: rgba(201,168,76,0.7) !important;
+}
+.casino-felt .num-grid .nc:hover {
+  background: rgba(201,168,76,0.15) !important;
+  border-color: var(--gold3) !important;
+  color: var(--gold2) !important;
+}
+.casino-felt .num-grid .nc.picked {
+  background: rgba(201,168,76,0.25) !important;
+  border-color: var(--gold) !important;
+  color: var(--gold2) !important;
+  box-shadow: 0 0 8px rgba(201,168,76,0.3) !important;
+}
+
+/* ── BANNER GANADOR CASINO ── */
+.casino-winner-banner {
+  display:none;
+  position:fixed; inset:0;
+  z-index:190;
+  background: linear-gradient(135deg, rgba(10,5,0,0.97) 0%, rgba(30,15,0,0.97) 50%, rgba(10,5,0,0.97) 100%);
+  animation: casinoWinBg 0.5s ease;
+}
+.casino-winner-banner.show { display:flex; align-items:center; justify-content:center; flex-direction:column; }
+@keyframes casinoWinBg { from{opacity:0} to{opacity:1} }
+
+/* Flash del cuerpo al ganar */
+@keyframes bodyWinFlash {
+  0%   { filter:brightness(1); }
+  20%  { filter:brightness(2.5) saturate(2); }
+  40%  { filter:brightness(1.2); }
+  60%  { filter:brightness(2); }
+  80%  { filter:brightness(1.1); }
+  100% { filter:brightness(1); }
+}
+body.casino-win-flash { animation: bodyWinFlash 1.2s ease forwards; }
+
+/* ── MARQUESINA DE NÚMEROS ── */
+.marquesina-wrap {
+  overflow:hidden; white-space:nowrap;
+  background:var(--bg2); border-top:1px solid var(--gold-dim);
+  border-bottom:1px solid var(--gold-dim);
+  padding:8px 0; margin-bottom:14px;
+}
+.marquesina-track {
+  display:inline-block;
+  animation: marquesinaScroll 20s linear infinite;
+  font-family:'Share Tech Mono',monospace; font-size:13px;
+  color:var(--gold3); letter-spacing:4px;
+}
+@keyframes marquesinaScroll {
+  from { transform:translateX(100vw); }
+  to   { transform:translateX(-100%); }
+}
+
+/* ── CARTA DE JUGADOR (estilo casino) ── */
+.player-card {
+  position:relative; overflow:hidden;
+}
+.player-card::before {
+  content:'';
+  position:absolute; top:0; left:0; right:0; height:2px;
+  background:linear-gradient(90deg, transparent, var(--gold3), transparent);
+  opacity:0; transition:opacity 0.3s;
+}
+.player-card:hover::before { opacity:1; }
+.player-card.winner-p::before { opacity:1; background:linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+/* ── SCORE ANIMADO ── */
+.pc-score-num {
+  background: linear-gradient(135deg, var(--gold), var(--gold2), var(--gold3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 4px rgba(201,168,76,0.3));
+}
+
+/* ── BOTONES CASINO ── */
+.btn-gold {
+  background: linear-gradient(135deg, #4a3c18 0%, #8a6f2e 50%, #4a3c18 100%) !important;
+  border: 1px solid var(--gold) !important;
+  position:relative; overflow:hidden;
+}
+.btn-gold::before {
+  content:'';
+  position:absolute; top:-50%; left:-60%; width:30%; height:200%;
+  background:rgba(255,255,255,0.08);
+  transform:skewX(-20deg);
+  transition:left 0.5s;
+}
+.btn-gold:hover::before { left:130%; }
+
+/* ── CONTADOR ESTILO CASINO ── */
+.countdown-timer {
+  font-family:'Share Tech Mono',monospace !important;
+  background: linear-gradient(90deg, #1a0800, #2a1000, #1a0800);
+  border: 1px solid var(--gold3);
+  border-radius: 4px;
+  padding: 6px 12px;
+  display: inline-block;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 0 8px rgba(201,168,76,0.1);
+  letter-spacing: 4px !important;
+}
+.countdown-timer.urgente {
+  border-color: var(--red2) !important;
+  color: #ff6060 !important;
+  animation: urgentePulse 0.5s ease-in-out infinite alternate, countdownBlink 0.5s ease-in-out infinite !important;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5), 0 0 12px rgba(200,50,50,0.4) !important;
+}
+@keyframes urgentePulse {
+  from { transform:scale(1); }
+  to   { transform:scale(1.03); }
+}
+@keyframes countdownBlink {
+  from { opacity:1; }
+  to   { opacity:0.7; }
+}
+
+/* ── WIN OVERLAY CASINO ── */
+.win-overlay .win-box {
+  background: linear-gradient(160deg, #1a0e00 0%, #0a0800 40%, #1a0a00 100%);
+  border: 1px solid var(--gold);
+  border-top: 3px solid var(--gold2);
+  box-shadow: 0 0 80px rgba(201,168,76,0.2), inset 0 0 40px rgba(201,168,76,0.03), var(--shadow-lg);
+}
+.win-name {
+  background: linear-gradient(135deg, var(--gold), var(--gold2), var(--gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 0 8px rgba(201,168,76,0.4));
+}
+.win-prize {
+  text-shadow: 0 0 20px rgba(201,168,76,0.5), 0 0 40px rgba(201,168,76,0.3) !important;
+  animation: prizePulse 1.5s ease-in-out infinite !important;
+}
+@keyframes prizePulse {
+  0%,100% { filter:brightness(1); }
+  50%     { filter:brightness(1.3) drop-shadow(0 0 12px rgba(201,168,76,0.6)); }
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.1.1/tesseract.min.js"></script>
+</head>
+<body>
+
+<!-- LUCES AMBIENTALES CASINO -->
+<div class="casino-lights"></div>
+
+<!-- MARQUESINA -->
+<div class="marquesina-wrap" id="marquesinaWrap">
+  <div class="marquesina-track" id="marquesinaTrack">
+    🎰 SORTEO DIARIO DE NÚMEROS · 🃏 JUGÁ CON RESPONSABILIDAD · 🏆 SOLO UN GANADOR · 💰 TODO EL POZO · 🎲 SUERTE PARA TODOS · ⭐ LA POLLA · 🎰 SORTEO DIARIO DE NÚMEROS · 🃏 JUGÁ CON RESPONSABILIDAD · 🏆 SOLO UN GANADOR
+  </div>
+</div>
+
+<!-- BANNER POZO FIJO ARRIBA -->
+<div class="pozo-banner" style="display:flex;align-items:center;justify-content:center;gap:18px;padding:10px 20px">
+  <div style="text-align:center">
+    <div class="pozo-banner-label" style="font-size:10px;letter-spacing:5px">💰 POZO ACUMULADO</div>
+    <div class="pozo-banner-monto" id="pozoBanner" style="font-size:clamp(28px,8vw,44px);line-height:1.1">$ 0</div>
+  </div>
+  <div style="width:1px;height:40px;background:rgba(201,168,76,0.3)"></div>
+  <div style="text-align:center">
+    <div class="pozo-banner-label" style="font-size:10px;letter-spacing:5px">🎟 BOLETAS</div>
+    <div id="pozoBannerBoletas" style="font-family:'Bebas Neue',cursive;font-size:clamp(28px,8vw,44px);color:var(--gold2);line-height:1.1">0</div>
+  </div>
+  <div id="finJugadaWrap" style="display:none;text-align:center">
+    <div style="width:1px;height:40px;background:rgba(122,21,21,0.4);display:inline-block;margin-right:18px;vertical-align:middle"></div>
+    <div style="display:inline-block;vertical-align:middle">
+      <div class="pozo-banner-label" style="font-size:10px;letter-spacing:4px;color:#e08080">⏳ CIERRA EN</div>
+      <div id="finJugadaCountdown" style="font-family:'Share Tech Mono',monospace;font-weight:700;font-size:clamp(18px,5vw,26px);color:#e08080;animation:destello 1.5s ease-in-out infinite">—</div>
+    </div>
+  </div>
+</div>
+
+<div class="app">
+
+<header>
+  <div class="gold-line"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between">
+    <div class="logo" style="margin:0">LA POLLA</div>
+    <button onclick="abrirApariencia()" id="btnApariencia" style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold3);border:1px solid var(--border);padding:6px 11px;border-radius:2px;background:var(--surface);cursor:pointer;letter-spacing:1px;margin-top:8px">🎨 Apariencia</button>
+    <button onclick="goTab('prefs')" id="btnAjustes" style="display:none;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold3);border:1px solid var(--border);padding:6px 11px;border-radius:2px;background:var(--surface);cursor:pointer;letter-spacing:1px;margin-top:8px">⚙️ Ajustes</button>
+  </div>
+  <div class="logo-sub">Juego de Números Online</div>
+  <div class="casino-sign">✦ Sorteo Privado Entre Amigos ✦</div>
+  <!-- POZO TENTADOR en lugar de fichas -->
+  <div style="margin:12px auto 4px;max-width:340px">
+    <div style="background:linear-gradient(135deg,#1a0e00,#0a0800);border:1px solid var(--gold3);border-radius:8px;padding:12px 18px;text-align:center;box-shadow:0 0 20px rgba(201,168,76,0.1)">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:4px;color:var(--text-dim);margin-bottom:4px">🏆 EL PRÓXIMO GANADOR SE LLEVA</div>
+      <div id="pozoTentador" style="font-family:'Bebas Neue',cursive;font-size:clamp(32px,9vw,48px);color:var(--gold);line-height:1;animation:destello 2s ease-in-out infinite">$ 0</div>
+      <div id="boletasTentador" style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);margin-top:4px;letter-spacing:2px">0 boletas jugando · ¿La tuya?</div>
+    </div>
+  </div>
+  <div class="ornament">
+    <div class="orn-line"></div><div class="orn-diamond">◆</div>
+    <div class="orn-diamond" style="font-size:15px;color:var(--gold3)">🎰</div>
+    <div class="orn-diamond">◆</div><div class="orn-line right"></div>
+  </div>
+  <div class="gold-line-sm"></div>
+  <div class="pozo-strip">
+    <span class="pozo-label">Pozo Total</span>
+    <span class="pozo-value" id="pozoVal">$ 0,00</span>
+  </div>
+  <div id="syncIndicator">⏳ Conectando...</div>
+  <div id="salaIndicator" style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-top:2px"></div>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="goTab('inicio')"  id="tab-inicio">📖 Reglas</div>
+  <div class="tab"        onclick="goTab('jugar')"   id="tab-jugar">🎲 Jugar</div>
+  <div class="tab"        onclick="goTab('tablero')" id="tab-tablero">📊 Tablero</div>
+  <div class="tab"        onclick="goTab('admin')"   id="tab-admin">🔐 Admin</div>
+  <div class="tab"        onclick="goTab('prefs')"   id="tab-prefs" style="display:none">⚙️</div>
+</div>
+
+<!-- CÓMO JUGAR -->
+<div class="panel active" id="panel-inicio">
+  <div class="instrucciones">
+    <div class="instr-titulo">¿ Cómo se juega ?</div>
+    <div class="instr-subtitulo">Leé bien · Es muy fácil · ¡Podés ganar!</div>
+    <div class="paso"><div class="paso-num">1</div><div class="paso-body"><span class="paso-emoji">📋</span><div class="paso-titulo">Registrá tu jugada</div><div class="paso-desc">Tocá <em>Jugar</em>, escribí tu nombre, tu apuesta y elegí <strong>10 números</strong> del 00 al 99. Podés repetir el mismo número.</div></div></div>
+    <div class="paso"><div class="paso-num">2</div><div class="paso-body"><span class="paso-emoji">⏳</span><div class="paso-titulo">Esperá la autorización</div><div class="paso-desc">Tu jugada queda <strong>pendiente</strong> hasta que el organizador la apruebe.</div></div></div>
+    <div class="paso"><div class="paso-num">3</div><div class="paso-body"><span class="paso-emoji">📡</span><div class="paso-titulo">El sorteo es cada día</div><div class="paso-desc">El organizador carga los <strong>10 números</strong> del sorteo diario de números. Un número puede repetirse.</div></div></div>
+    <div class="paso"><div class="paso-num">4</div><div class="paso-body"><span class="paso-emoji">🏆</span><div class="paso-titulo">¿Quién gana el pozo?</div><div class="paso-desc">El primero en completar sus <strong>10 números</strong> gana TODO el pozo. Si elegiste el <strong>07 dos veces</strong>, necesitás que el <strong>07 salga dos veces</strong> en el sorteo.</div></div></div>
+    <div class="aviso"><div class="aviso-icon">⚠️</div><div class="aviso-texto"><strong>Importante:</strong> Nadie está habilitado hasta que el organizador lo autorice.</div></div>
+    <div class="aviso" style="background:rgba(122,21,21,0.2);border:2px solid var(--red2)"><div class="aviso-icon">🔞</div><div class="aviso-texto"><strong>Prohibido para menores de edad.</strong> Este juego involucra apuestas de dinero y está destinado exclusivamente a personas mayores de 18 años. Jugar en exceso puede ser perjudicial para tu salud económica y emocional. Jugá con responsabilidad y dentro de tus posibilidades.</div></div>
+  </div>
+</div>
+
+<!-- MI JUGADA -->
+<div class="panel" id="panel-jugar">
+
+  <!-- CONTADOR REGRESIVO -->
+  <div class="card">
+    <div class="card-title">Tu Jugada</div>
+    <div class="card-sub">Podés repetir números. Tocá uno varias veces para elegirlo más de una vez. Toque largo para quitarlo.</div>
+    <div class="field"><label>Tu nombre</label><input type="text" id="jNombre" placeholder="Ej: Martín G." maxlength="25"></div>
+    <div class="field"><label>Tu WhatsApp (con cód. de área)</label><input type="tel" id="jTelefono" placeholder="OPCIONAL" maxlength="20"></div>
+    <div class="field"><label>Apuesta por jugada ($)</label><input type="number" id="jApuesta" placeholder="200" min="1"></div>
+    <div class="grid-label">Jugada <span id="jNumLabel">1</span> — Elegí 10 números (podés repetir)</div>
+    <div class="selected-strip" id="jStrip"><span class="strip-placeholder">Ninguno aún — tocá la grilla</span></div>
+    <div class="counter-row">
+      <span class="counter-text">Elegidos: <strong id="jCount">0</strong> / 10</span>
+      <span class="counter-text" id="jHint" style="color:var(--gold)">Faltan 10</span>
+    </div>
+    <div class="casino-felt">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(201,168,76,0.35);text-align:center;letter-spacing:4px;margin-bottom:10px">✦ MESA DE JUEGO — SELECCIONÁ TUS NÚMEROS ✦</div>
+      <div class="num-grid" id="jGrid"></div>
+    </div>
+    <div class="alert alert-err" id="jAlert"></div>
+    <div id="jugadasAgregadas" style="display:none;margin-top:14px">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:7px">JUGADAS LISTAS:</div>
+      <div id="jugadasList"></div>
+    </div>
+    <div style="display:flex;gap:8px;margin-top:10px">
+      <button class="btn btn-dark btn-sm btn-clean" onclick="anularJugada()" style="flex:1">Anular</button>
+      <button class="btn btn-accent btn-sm btn-clean" onclick="agregarJugada()" style="flex:1">+ Agregar otra</button>
+    </div>
+    <button class="btn btn-gold btn-clean" onclick="enviarJugada()" style="width:100%;margin-top:8px">Enviar al Admin ➤</button>
+  </div>
+
+  <!-- 🤖 SUGERENCIA BASADA EN HISTORIAL -->
+  <div class="card" style="background:linear-gradient(135deg,#0a0a1a,#050510);border:1px solid #2a4a9a">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px">
+      <div style="font-size:24px">🤖</div>
+      <div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:20px;color:#80aaff;letter-spacing:3px">JUGADA SUGERIDA</div>
+        <div style="font-family:'Lato',sans-serif;font-size:13px;color:#4a6090">Basada en el historial real de sorteos de esta sala</div>
+      </div>
+    </div>
+    <div id="iaSugerencia" style="background:rgba(42,74,154,0.1);border:1px solid rgba(42,74,154,0.3);border-radius:4px;padding:12px;min-height:52px;font-family:'Share Tech Mono',monospace;font-size:13px;color:#80aaff;line-height:1.6;margin-bottom:12px">
+      Tocá el botón para generar una sugerencia de 10 números según el historial.
+    </div>
+    <button class="btn btn-full btn-clean" onclick="generarJugadaIA()" id="btnIASugiere"
+      style="background:linear-gradient(135deg,#1a2a6a,#2a4a9a);border:1px solid #2a4a9a;color:#80aaff;font-size:16px;letter-spacing:2px">
+      🤖 Generar Sugerencia
+    </button>
+    <div id="iaNumeros" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;display:none"></div>
+    <button class="btn btn-full btn-clean" onclick="cargarJugadaIA()" id="btnIACargar"
+      style="display:none;margin-top:12px;background:linear-gradient(135deg,#1a6a2a,#2a9a4a);border:1px solid #2a9a4a;color:#80ffaa;font-size:15px;letter-spacing:1px">
+      ✅ Cargar esta jugada
+    </button>
+  </div>
+
+  <!-- ESTADÍSTICAS MEJORADAS -->
+  <div style="background:var(--surface);border:1px solid var(--border);border-top:2px solid var(--gold3);border-radius:6px;padding:18px 16px;margin-bottom:14px">
+    <div style="font-family:'Bebas Neue',cursive;font-size:26px;color:var(--gold);letter-spacing:4px;margin-bottom:16px">📊 Inteligencia de Sorteos</div>
+
+    <!-- NUNCA SALIERON -->
+    <div style="margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="font-size:20px">🔥</div>
+        <div>
+          <div style="font-family:'Bebas Neue',cursive;font-size:18px;color:var(--gold);letter-spacing:3px">NUNCA SALIERON</div>
+          <div style="font-family:'Lato',sans-serif;font-size:13px;color:var(--text-dim)">Estos números no aparecieron en ningún sorteo todavía — ¡los más potables!</div>
+        </div>
+      </div>
+      <div id="statsNoSalieron" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text-dim);font-style:italic">Sin sorteos aún.</div>
+      </div>
+    </div>
+
+    <!-- DIVISIÓN -->
+    <div style="height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent);margin-bottom:18px"></div>
+
+    <!-- MÁS FRECUENTES -->
+    <div style="margin-bottom:18px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="font-size:20px">📈</div>
+        <div>
+          <div style="font-family:'Bebas Neue',cursive;font-size:18px;color:var(--gold);letter-spacing:3px">LOS QUE MÁS SALEN</div>
+          <div style="font-family:'Lato',sans-serif;font-size:13px;color:var(--text-dim)">Históricamente los más frecuentes en este juego</div>
+        </div>
+      </div>
+      <div id="statsCalientes" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text-dim);font-style:italic">Sin sorteos aún.</div>
+      </div>
+    </div>
+
+    <!-- DIVISIÓN -->
+    <div style="height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent);margin-bottom:18px"></div>
+
+    <!-- MENOS FRECUENTES -->
+    <div style="margin-bottom:20px">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px">
+        <div style="font-size:20px">❄️</div>
+        <div>
+          <div style="font-family:'Bebas Neue',cursive;font-size:18px;color:var(--gold);letter-spacing:3px">LOS QUE MENOS SALEN</div>
+          <div style="font-family:'Lato',sans-serif;font-size:13px;color:var(--text-dim)">Aparecen poco — pueden estar por explotar</div>
+        </div>
+      </div>
+      <div id="statsFrios" style="display:flex;flex-wrap:wrap;gap:6px;margin-top:8px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:13px;color:var(--text-dim);font-style:italic">Sin sorteos aún.</div>
+      </div>
+    </div>
+
+    <!-- DIVISIÓN -->
+    <div style="height:1px;background:linear-gradient(90deg,transparent,var(--gold-dim),transparent);margin-bottom:18px"></div>
+
+    <!-- 🤖 (bloque de IA movido a la pestaña Jugar) -->
+  </div>
+</div>
+
+<!-- TABLERO -->
+<div class="panel" id="panel-tablero">
+
+  <!-- POZO NETO + BOLETAS + PROPUESTA -->
+  <div style="background:linear-gradient(135deg,#1a0e00,#0a0800);border:2px solid var(--gold3);border-radius:8px;padding:18px 16px;margin-bottom:14px;box-shadow:0 0 20px rgba(201,168,76,0.1)">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:10px">
+      <div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:4px;color:var(--text-dim);margin-bottom:4px">💰 LO QUE PODÉS GANAR</div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:clamp(38px,10vw,54px);color:var(--gold);line-height:1;animation:destello 2s ease-in-out infinite" id="pozoNeto">$ 0</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:3px;color:var(--text-dim);margin-bottom:4px">🎟 BOLETAS JUGANDO</div>
+        <div style="font-family:'Bebas Neue',cursive;font-size:44px;color:var(--gold2);line-height:1" id="boletasCount">0</div>
+      </div>
+    </div>
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.15);border-radius:5px;padding:10px 14px;font-family:'Lato',sans-serif;font-size:14px;color:var(--text-mid);line-height:1.5" id="propuestaTexto">
+      Sé el <strong>primero en jugar</strong> — el pozo empieza a crecer con vos 🎯
+    </div>
+  </div>
+
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px">
+    <div style="font-family:'Bebas Neue',cursive;font-size:26px;color:var(--gold);letter-spacing:3px">Clasificación</div>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);border:1px solid var(--border);padding:5px 11px;border-radius:2px;background:var(--surface)" id="dayLabel">Día 0</div>
+  </div>
+  <div style="background:var(--surface);border:1px solid var(--gold-dim);border-radius:3px;padding:11px 13px;margin-bottom:14px">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:9px">🏁 RANKING EN VIVO</div>
+    <div id="rankingPublico"><div class="empty">Sin jugadores aún.</div></div>
+  </div>
+  <div class="player-list" id="tableroList"><div class="empty">Aún no hay jugadores autorizados.</div></div>
+  <div style="margin-top:18px;background:var(--surface);border:1px solid var(--gold-dim);border-radius:3px;padding:13px 15px">
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--gold);letter-spacing:3px;margin-bottom:9px">🔍 VERIFICAR MI JUGADA</div>
+    <div style="font-size:13px;color:var(--text-mid);margin-bottom:9px">Escribí tu nombre y chequeá cómo vas.</div>
+    <div style="display:flex;gap:7px">
+      <input type="text" id="verificarNombre" placeholder="Tu nombre..." style="flex:1;padding:9px 13px;background:var(--bg2);border:1px solid var(--border);border-radius:3px;color:var(--cream);font-family:'Lato',sans-serif;font-size:15px;-webkit-user-select:text;user-select:text">
+      <button class="btn btn-gold btn-sm" onclick="verificarJugada()">Ver</button>
+    </div>
+    <div id="verificarResult" style="margin-top:11px"></div>
+  </div>
+</div>
+
+<!-- ADMIN -->
+<div class="panel" id="panel-admin">
+  <div id="adminLock" class="admin-lock">
+    <div style="font-size:40px;margin-bottom:9px">🔐</div>
+    <h2>Panel Administrador</h2>
+    <p>Acceso exclusivo para el organizador.</p>
+    <div class="field"><label>Contraseña</label><input type="password" id="adminPass" placeholder="••••••" onkeydown="if(event.key==='Enter')loginAdmin()"></div>
+    <div class="alert alert-err" id="adminAlert"></div>
+    <button class="btn btn-gold btn-full" id="btnLoginAdmin" onclick="loginAdmin()">Ingresar como Admin</button>
+  </div>
+  <div id="adminContent" style="display:none">
+    <div id="firebaseAlert" style="display:none;background:rgba(122,21,21,0.2);border:1px solid var(--red2);border-radius:4px;padding:13px 15px;margin-bottom:14px;font-size:14px;color:#e08080;font-family:'Share Tech Mono',monospace;letter-spacing:1px"></div>
+    <div class="card">
+      <div class="card-title">Jugadores Pendientes</div>
+      <div class="pending-list" id="pendingList"><div class="empty">Sin jugadores pendientes.</div></div>
+    </div>
+    <hr class="sep">
+    <div class="card">
+      <div class="card-title">📡 Sorteo Oficial</div>
+      <div class="card-sub" id="sorteoSub">Día 1 — Cargá los números del sorteo.</div>
+
+      <!-- SELECTOR CANTIDAD DE NÚMEROS POR SORTEO -->
+      <div style="background:var(--bg2);border:1px solid var(--gold-dim);border-radius:3px;padding:13px 15px;margin-bottom:13px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:3px;margin-bottom:10px">⚙️ NÚMEROS POR SORTEO</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+          <button class="pref-btn-sorteo active" id="modo10" onclick="setModoSorteo(10)" style="padding:12px;font-family:'Share Tech Mono',monospace;font-size:14px;border:1px solid var(--border);border-radius:3px;background:var(--surface);color:var(--text-dim);cursor:pointer">10 números</button>
+          <button class="pref-btn-sorteo" id="modo20" onclick="setModoSorteo(20)" style="padding:12px;font-family:'Share Tech Mono',monospace;font-size:14px;border:1px solid var(--border);border-radius:3px;background:var(--surface);color:var(--text-dim);cursor:pointer">20 números</button>
+        </div>
+        <div style="font-size:13px;color:var(--text-dim);margin-top:9px;line-height:1.5">10 = solo el 1er premio de cada sorteo (más lento, más tradicional). 20 = extracto completo de cada sorteo (jugadas se completan más rápido).</div>
+      </div>
+
+      <!-- CARGA POR FOTO — OCR -->
+      <div style="background:var(--bg2);border:1px solid var(--gold-dim);border-radius:3px;padding:14px 16px;margin-bottom:13px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:3px;margin-bottom:9px">📸 CARGAR DESDE CAPTURA</div>
+        <div style="font-size:15px;color:var(--text-mid);margin-bottom:13px;line-height:1.6">Subí una captura de la app de resultados. El sistema extrae los números automáticamente.</div>
+        <input type="file" id="ocrFileInput" accept="image/*" style="display:none" onchange="procesarImagenOCR(this)">
+        <button class="btn btn-gold btn-full" onclick="document.getElementById('ocrFileInput').click()" id="btnOcr">📷 Subir captura del sorteo</button>
+        <div id="ocrStatus" style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);text-align:center;margin-top:10px;min-height:20px"></div>
+        <div id="ocrPreview" style="margin-top:10px;display:none">
+          <img id="ocrImgPreview" style="width:100%;border-radius:3px;border:1px solid var(--border)">
+          <button class="btn btn-dark btn-sm btn-clean btn-full" onclick="cancelarOCR()" style="margin-top:7px">✕ Cambiar imagen</button>
+        </div>
+        <div id="ocrResultados" style="margin-top:10px"></div>
+      </div>
+
+      <div style="display:flex;align-items:center;gap:9px;margin-bottom:13px">
+        <div style="flex:1;height:1px;background:var(--border)"></div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:3px">O MANUAL</div>
+        <div style="flex:1;height:1px;background:var(--border)"></div>
+      </div>
+      <div style="background:rgba(122,21,21,0.1);border:1px solid var(--red);border-radius:3px;padding:9px 13px;margin-bottom:13px;font-size:12px;color:var(--text-mid);font-family:'Share Tech Mono',monospace">⚠️ Tocá los números a mano si la captura o el sorteo falla</div>
+      <div class="lottery-ref">📎 <a href="https://www.nacionalloteria.com/argentina/index.php" target="_blank">nacionalloteria.com</a></div>
+      <div class="card-sub" style="margin-bottom:8px">Podés repetir el mismo número. Tocá varias veces para agregar repetidos.</div>
+      <div class="selected-strip" id="sStrip"></div>
+      <div class="counter-row"><span class="counter-text">Elegidos: <strong id="sCount">0</strong> / <span id="sMaxLabel">10</span></span></div>
+      <div class="casino-felt">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:rgba(201,168,76,0.35);text-align:center;letter-spacing:4px;margin-bottom:10px">✦ MESA DE SORTEO OFICIAL ✦</div>
+        <div class="num-grid" id="sGrid"></div>
+      </div>
+      <div class="alert alert-err" id="sAlert"></div>
+      <div style="display:flex;gap:8px">
+        <button class="btn btn-dark btn-sm btn-clean" onclick="anularSorteo()">Anular</button>
+        <button class="btn btn-gold btn-full btn-clean" onclick="procesarSorteo()">✅ Procesar Sorteo</button>
+      </div>
+    </div>
+    <hr class="sep">
+    <div style="font-family:'Bebas Neue',cursive;font-size:22px;color:var(--gold);letter-spacing:3px;margin-bottom:13px">Historial de Sorteos</div>
+    <div id="historialSorteos"><div class="empty">Sin sorteos aún.</div></div>
+    <hr class="sep">
+    <div style="font-family:'Bebas Neue',cursive;font-size:22px;color:var(--gold);letter-spacing:3px;margin-bottom:6px">💰 Historial de Comisiones</div>
+    <div style="font-family:'Lato',sans-serif;font-size:12px;color:var(--text-dim);margin-bottom:13px">Privado — solo lo ves vos y el panel. Cuánto se juntó, cuánto te queda, y cuánto corresponde abonar al panel por cada ronda.</div>
+    <div id="historialComisiones"><div class="empty">Todavía no hubo ganadores.</div></div>
+    <hr class="sep">
+
+    <!-- Timer oculto — solo para uso del JS -->
+    <div id="countdownTimer" style="display:none">--:--:--</div>
+    <hr class="sep">
+    <div class="card" style="border-top-color:var(--red2)">
+      <div class="card-title" style="font-size:19px">🔑 Cambiar Contraseña</div>
+      <div class="field"><label>Nueva contraseña</label><input type="password" id="newPass1" placeholder="••••••"></div>
+      <div class="field"><label>Repetir contraseña</label><input type="password" id="newPass2" placeholder="••••••"></div>
+      <div class="alert alert-err" id="passAlert"></div>
+      <button class="btn btn-dark btn-sm" onclick="cambiarPassword()">Guardar nueva contraseña</button>
+    </div>
+    <hr class="sep">
+    <div style="display:flex;gap:9px;flex-wrap:wrap">
+      <button class="btn btn-dark btn-sm" onclick="logoutAdmin()">Cerrar Sesión</button>
+      <button class="btn btn-sm" onclick="nuevaPartida()" style="background:rgba(122,21,21,0.2);border:1px solid var(--red2);color:#e08080;padding:7px 13px;font-size:12px">🔄 Nueva Partida</button>
+    </div>
+  </div>
+</div>
+
+<!-- PREFERENCIAS -->
+<div class="panel" id="panel-prefs">
+  <div class="pref-panel">
+    <div class="pref-title">🎨 Tema de Color</div>
+    <div class="pref-row">
+      <div class="pref-btn active" onclick="setTema('')" id="tema-negro">⬛ Negro/Oro</div>
+      <div class="pref-btn" onclick="setTema('verde')" id="tema-verde">🟢 Verde Casino</div>
+      <div class="pref-btn" onclick="setTema('azul')" id="tema-azul">🔵 Azul Noche</div>
+      <div class="pref-btn" onclick="setTema('moderna')" id="tema-moderna">🩵 Moderno Minimalista</div>
+      <div class="pref-btn" onclick="setTema('vibrante')" id="tema-vibrante">🧡 Vibrante y Cercana</div>
+    </div>
+  </div>
+  <div class="pref-panel">
+    <div class="pref-title">📐 Tamaño de Vista</div>
+    <div class="pref-row">
+      <div class="pref-btn" onclick="setVista('compacta')" id="vista-compacta">🔡 Compacta</div>
+      <div class="pref-btn active" onclick="setVista('')" id="vista-normal">📄 Normal</div>
+      <div class="pref-btn" onclick="setVista('grande')" id="vista-grande">🔠 Grande</div>
+      <div class="pref-btn" onclick="setVista('enorme')" id="vista-enorme">🔝 Enorme</div>
+    </div>
+  </div>
+  <div class="pref-panel">
+    <div class="pref-title">🎯 Jugada Activa</div>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);letter-spacing:1px;margin-bottom:14px">ARMÁ LA JUGADA QUE VA A REGIR PARA TODA LA SALA — FRECUENCIA, SORTEOS, CANTIDAD DE NÚMEROS Y MONTO MÍNIMO, TODO JUNTO</div>
+
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px">FRECUENCIA DEL JUEGO</div>
+    <style>#panel-prefs .pref-btn{font-size:15px!important;padding:12px 18px!important;min-height:48px!important;letter-spacing:2px!important}</style>
+    <div class="pref-row">
+      <div class="pref-btn active" onclick="setFrecuencia('semanal')" id="frec-semanal">📅 Semanal</div>
+      <div class="pref-btn" onclick="setFrecuencia('diario')" id="frec-diario">🗓 Diario</div>
+      <div class="pref-btn" onclick="setFrecuencia('completo')" id="frec-completo">🔄 5 Sorteos</div>
+    </div>
+
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px;margin-top:16px">SORTEOS A USAR (PODÉS ELEGIR VARIOS)</div>
+    <div class="pref-row" style="grid-template-columns:1fr 1fr">
+      <div class="pref-btn active" onclick="toggleSorteo('prematutina')" id="sort-prematutina">🌄 09hs Prematutina</div>
+      <div class="pref-btn" onclick="toggleSorteo('matutina')" id="sort-matutina">🌅 11hs Matutina</div>
+      <div class="pref-btn" onclick="toggleSorteo('vespertina')" id="sort-vespertina">🌤 14hs Vespertina</div>
+      <div class="pref-btn" onclick="toggleSorteo('tarde')" id="sort-tarde">🌆 17hs Tarde</div>
+      <div class="pref-btn" onclick="toggleSorteo('nocturna')" id="sort-nocturna">🌙 21hs Nocturna</div>
+    </div>
+
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px;margin-top:16px">NÚMEROS POR SORTEO</div>
+    <div class="pref-row">
+      <div class="pref-btn active" onclick="setNumsPorSorteo(10)" id="numsps-10">🔟 Primeros 10</div>
+      <div class="pref-btn" onclick="setNumsPorSorteo(20)" id="numsps-20">🎰 Extracto 20</div>
+    </div>
+
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px;margin-top:16px">MONTO MÍNIMO PARA ESTA COMBINACIÓN</div>
+    <div class="field" style="margin-bottom:9px">
+      <label>Monto por cartón ($)</label>
+      <input type="number" id="jugadaActivaMontoInput" placeholder="Ej: 20000" min="1" style="text-align:center;font-size:20px">
+    </div>
+
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:2px;margin-bottom:8px;margin-top:16px">CIERRE DE LA JUGADA (OPCIONAL — ACTIVA LA CUENTA REGRESIVA)</div>
+    <div style="display:flex;gap:8px;margin-bottom:9px">
+      <div class="field" style="flex:1;margin-bottom:0"><label>Día</label><input type="date" id="jugadaActivaFechaFin"></div>
+      <div class="field" style="flex:1;margin-bottom:0"><label>Hora</label><input type="time" id="jugadaActivaHoraFin"></div>
+    </div>
+    <button class="btn btn-dark btn-sm btn-clean" onclick="quitarFinJugadaActiva()" style="width:100%;margin-bottom:9px">✕ Quitar cierre / cuenta regresiva</button>
+
+    <button class="btn btn-gold btn-full" onclick="guardarJugadaActiva()">Guardar Jugada Activa</button>
+    <div id="jugadaActivaStatus" style="font-family:'Share Tech Mono',monospace;font-size:12px;text-align:center;margin-top:9px;color:var(--text-dim)"></div>
+    <div id="botStatus" style="margin-top:10px;font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);background:var(--bg2);border:1px solid var(--gold-dim);border-radius:3px;padding:8px 11px"></div>
+  </div>
+  <div class="pref-panel">
+    <div class="pref-title">🎵 Melodías</div>
+    <div class="pref-row">
+      <div class="pref-btn active" onclick="setSonido('casino')" id="son-casino">🎰 Casino</div>
+      <div class="pref-btn" onclick="setSonido('clasico')" id="son-clasico">🎺 Clásico</div>
+      <div class="pref-btn" onclick="setSonido('silencio')" id="son-silencio">🔇 Silencio</div>
+    </div>
+    <div style="font-size:12px;color:var(--text-dim);font-family:'Share Tech Mono',monospace;margin-top:6px">
+      🎰 Casino: fichas + fanfarria al ganar<br>
+      🎺 Clásico: bolillero + campanita<br>
+      🔇 Sin sonido
+    </div>
+  </div>
+  <div class="pref-panel">
+    <div class="pref-title">💰 Distribución del Pozo</div>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--text-dim);letter-spacing:2px;margin-bottom:12px">ACORDADO CON EL VENDEDOR AL CREAR LA SALA — SE EDITA DESDE EL PANEL, NO ACÁ</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px">
+      <div style="text-align:center;padding:12px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:3px">
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:4px">🏆 Ganador</div>
+        <div style="font-size:22px;color:var(--gold)" id="pctGanadorView">70%</div>
+      </div>
+      <div style="text-align:center;padding:12px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:3px">
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:4px">💼 Admin</div>
+        <div style="font-size:22px;color:#90ee90" id="pctAdminView">15%</div>
+      </div>
+      <div style="text-align:center;padding:12px 8px;background:var(--bg2);border:1px solid var(--border);border-radius:3px">
+        <div style="font-size:11px;color:var(--text-dim);margin-bottom:4px">💰 Owner</div>
+        <div style="font-size:22px;color:#ffaaaa" id="pctOwnerView">15%</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div><!-- /app -->
+
+<!-- WINNER -->
+<div class="win-overlay" id="winOverlay">
+  <div class="win-box">
+    <span class="win-trophy">🏆</span>
+    <div class="win-eyebrow">Gran Premio</div>
+    <div class="win-title">¡ Tenemos Ganador !</div>
+    <div class="win-name"  id="winName">—</div>
+    <div class="win-detail" id="winDetail">—</div>
+    <div class="win-prize"  id="winPrize">—</div>
+    <div class="win-prize-label">Premio Total del Pozo</div>
+    <div style="display:flex;gap:11px;justify-content:center;flex-wrap:wrap;margin-top:4px">
+      <button class="btn btn-gold" onclick="closeWin()">Celebrar 🎉</button>
+      <button class="btn btn-crimson" onclick="nuevaPartida()" style="background:var(--surface2);border:1px solid var(--gold3);color:var(--gold)">🔄 Nueva Partida</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// ══════════════════════════════════════
+//  CONFIG
+// ══════════════════════════════════════
+// (la contraseña fija que estaba acá se eliminó — el login ahora es real, vía Firebase Auth)
+
+const FIREBASE_URL  = 'https://nono-5513e-default-rtdb.firebaseio.com';
+const FIREBASE_API_KEY = 'AIzaSyAqLoZkJ_9SmpZ4yk9VhxvsV-RHf6fBzjk';
+
+// ══════════════════════════════════════
+//  IDENTIFICAR SALA (cada cliente independiente)
+// ══════════════════════════════════════
+// La URL debe ser: tulink.html?sala=pablo  o  tulink.html?sala=fede
+// Si no trae parámetro ?sala= se usa "default" (modo prueba / dueño)
+const urlParams = new URLSearchParams(window.location.search);
+const SALA_ID = (urlParams.get('sala') || 'default').toLowerCase().trim().replace(/[^a-z0-9-]/g,'');
+// Rutas de Firebase exclusivas de esta sala — nada se mezcla entre Pablo y Fede
+const PATH_DATA   = `salas/${SALA_ID}/lapolla`;
+const PATH_CONFIG = `salas/${SALA_ID}/lapolla_config`;
+
+// ══════════════════════════════════════
+//  PRIMER ACCESO = ADMIN
+//  El primer dispositivo que abre el link de esta sala se queda con la
+//  opción de admin para siempre (en ESE dispositivo). A partir del segundo
+//  visitante, nadie más ve ni puede activar el modo admin — ni por accidente.
+// ══════════════════════════════════════
+const PRIMER_ACCESO_KEY = `lp_esAdmin_${SALA_ID}`;
+let _esPotencialAdmin = localStorage.getItem(PRIMER_ACCESO_KEY) === '1';
+async function verificarPrimerAcceso(){
+  if(_esPotencialAdmin) return; // este dispositivo ya se sabe admin
+  try{
+    const r = await fetch(`${FIREBASE_URL}/${PATH_CONFIG}/primerAccesoUsado.json`);
+    const usado = await r.json();
+    if(!usado){
+      await fetch(`${FIREBASE_URL}/${PATH_CONFIG}/primerAccesoUsado.json`,{
+        method:'PUT', headers:{'Content-Type':'application/json'}, body:'true'
+      });
+      localStorage.setItem(PRIMER_ACCESO_KEY,'1');
+      _esPotencialAdmin = true;
+    }
+  } catch(e){}
+}
+verificarPrimerAcceso();
+const PATH_COM    = `salas/${SALA_ID}/comisiones`;
+const PATH_SORTEO = `salas/${SALA_ID}/sorteo_auto`;
+const SALA_EMAIL  = `${SALA_ID}@pollazo.local`;
+
+// ══════════════════════════════════════
+//  AUTENTICACIÓN REAL DEL ADMIN (Firebase Auth)
+// ══════════════════════════════════════
+let ADMIN_ID_TOKEN = null;
+let ADMIN_REFRESH_TOKEN = null;
+let _refreshInterval = null;
+
+const fbAuthSignIn = async (email, password) => {
+  const r = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${FIREBASE_API_KEY}`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email, password, returnSecureToken: true })
+  });
+  const data = await r.json();
+  if (!r.ok) throw new Error(data?.error?.message || 'auth_error');
+  return data; // { idToken, refreshToken, ... }
+};
+
+const fbAuthRefresh = async () => {
+  if (!ADMIN_REFRESH_TOKEN) return;
+  try {
+    const r = await fetch(`https://securetoken.googleapis.com/v1/token?key=${FIREBASE_API_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: `grant_type=refresh_token&refresh_token=${ADMIN_REFRESH_TOKEN}`
+    });
+    const data = await r.json();
+    if (r.ok) { ADMIN_ID_TOKEN = data.id_token; ADMIN_REFRESH_TOKEN = data.refresh_token; }
+  } catch(e) { /* si falla, el próximo guardado simplemente irá sin token */ }
+};
+
+const iniciarSesionAdminFirebase = async pass => {
+  const data = await fbAuthSignIn(SALA_EMAIL, pass);
+  ADMIN_ID_TOKEN = data.idToken;
+  ADMIN_REFRESH_TOKEN = data.refreshToken;
+  if (_refreshInterval) clearInterval(_refreshInterval);
+  _refreshInterval = setInterval(fbAuthRefresh, 50*60*1000); // cada 50 min
+};
+
+const cerrarSesionAdminFirebase = () => {
+  ADMIN_ID_TOKEN = null; ADMIN_REFRESH_TOKEN = null;
+  if (_refreshInterval) { clearInterval(_refreshInterval); _refreshInterval = null; }
+};
+
+// ══════════════════════════════════════
+//  VERIFICAR SALA ACTIVA (solo la propia, no todas)
+// ══════════════════════════════════════
+async function verificarSalaActiva(){
+  try {
+    const res = await fetch(`${FIREBASE_URL}/panel_salas.json`);
+    const data = await res.json();
+    if(!data) return; // Si no hay panel, funciona normal
+    const salas = Object.values(data);
+    // Buscar SOLO la sala que coincide con el ID de esta URL
+    const miSala = salas.find(s => s.sala === SALA_ID);
+    if(miSala && miSala.estado === 'suspendida'){
+      document.body.innerHTML = `
+        <div style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:#080808;padding:24px">
+          <div style="text-align:center;max-width:360px">
+            <div style="font-size:64px;margin-bottom:16px">🔒</div>
+            <div style="font-family:'Bebas Neue',cursive;font-size:36px;color:#c9a84c;letter-spacing:4px;margin-bottom:8px">LA POLLA</div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:#4a4030;letter-spacing:3px;margin-bottom:24px">SERVICIO SUSPENDIDO</div>
+            <div style="background:#181818;border:1px solid #9a1c1c;border-radius:4px;padding:20px;margin-bottom:20px">
+              <div style="font-size:15px;color:#e08080;line-height:1.6">Esta sala está suspendida.<br>Contactá al organizador para renovar.</div>
+            </div>
+            <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:#2a2a2a;letter-spacing:2px">LA POLLA © 2024</div>
+          </div>
+        </div>`;
+    }
+  } catch(e){ /* Si falla la verificación, funciona normal */ }
+}
+verificarSalaActiva();
+const _salaEl=document.getElementById('salaIndicator');
+if(_salaEl) _salaEl.textContent = SALA_ID==='default' ? '🏠 Sala: General' : `🏠 Sala: ${SALA_ID}`;
+const SCRIPT_URL    = 'https://script.google.com/macros/s/AKfycbwAM4Z-xzJIddLldAlpBj51WacFcPp_ZVh_lpakqG5iAECQaVa6l9PN41UW3Yl46ZF9/exec';
+
+// Acceso admin oculto — triple tap en el logo
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('tab-admin').style.display = 'none';
+  // Sincronizar visual de checkboxes de sorteo y frecuencia con lo cargado de localStorage
+  Object.keys(SORTEO_HORARIOS).forEach(x=>{ const el=document.getElementById('sort-'+x); if(el) el.classList.toggle('active', prefSorteo.includes(x)); });
+  ['semanal','diario','completo'].forEach(x=>{ const el=document.getElementById('frec-'+x); if(el) el.classList.toggle('active', x===prefFrecuencia); });
+  updateBotStatus();
+});
+let _tapCount=0, _tapTimer=null;
+document.querySelector('.logo').addEventListener('click', () => {
+  if(!_esPotencialAdmin) return; // nadie más ve ni activa el modo admin
+  _tapCount++;
+  clearTimeout(_tapTimer);
+  _tapTimer = setTimeout(()=>{ _tapCount=0; }, 600);
+  if(_tapCount >= 3){
+    _tapCount=0;
+    const t = document.getElementById('tab-admin');
+    t.style.display='flex'; t.classList.add('visible');
+    goTab('admin');
+    showToast('🔐 Acceso Admin desbloqueado');
+  }
+});
+
+let adminLogged=false, players=[], draws=[], gameOver=false;
+// Historial de sorteos de TODA la vida de la sala — a diferencia de `draws`
+// (que se borra con "Nueva Partida"), esto se acumula para siempre, y es lo
+// que le da profundidad real a las estadísticas y a la sugerencia de jugada.
+let historialSorteos = [];
+const PATH_HISTORIAL = `salas/${SALA_ID}/historial_sorteos`;
+async function cargarHistorialSorteos(){
+  try{
+    const r = await fetch(`${FIREBASE_URL}/${PATH_HISTORIAL}.json`);
+    const data = await r.json();
+    historialSorteos = data ? Object.values(data) : [];
+  }catch(e){ historialSorteos = []; }
+}
+function guardarHistorialSorteo(numeros, dia, fecha){
+  fetch(`${FIREBASE_URL}/${PATH_HISTORIAL}.json`,{
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({ day:dia, date:fecha, numbers:numeros })
+  }).catch(()=>{});
+}
+cargarHistorialSorteos();
+let MODO_SORTEO = parseInt(localStorage.getItem('lp_modoSorteo')) || 10;
+const SORTEO_HORARIOS={
+  prematutina:{label:'Prematutina', hora:'09:00'},
+  matutina:   {label:'Matutina',    hora:'11:00'},
+  vespertina: {label:'Vespertina',  hora:'14:00'},
+  tarde:      {label:'Tarde',       hora:'17:00'},
+  nocturna:   {label:'Nocturna',    hora:'21:00'},
+};
+let prefFrecuencia = localStorage.getItem('lp_frecuencia') || 'diario';
+let prefSorteo = (()=>{ try{ const v=JSON.parse(localStorage.getItem('lp_sorteo')); return Array.isArray(v)&&v.length?v:['prematutina']; }catch(e){ return ['prematutina']; } })();
+let jSel=[], sSel=[], jugadasTemp=[], _apuestaFija=null;
+// Jugadas pendientes ya notificadas — persiste en localStorage para que
+// sobreviva a que el navegador recargue la página en segundo plano.
+const NOTIF_KEY = `lp_notificados_${SALA_ID}`;
+function getNotificados(){
+  try { return new Set(JSON.parse(localStorage.getItem(NOTIF_KEY)||'[]')); }
+  catch(e){ return new Set(); }
+}
+function guardarNotificados(set){
+  try { localStorage.setItem(NOTIF_KEY, JSON.stringify([...set].slice(-500))); }
+  catch(e){}
+}
+let _notificados = getNotificados();
+
+// ══════════════════════════════════════
+//  PREFERENCIAS
+// ══════════════════════════════════════
+let prefTema='', prefVista='', prefSonido='casino';
+
+function setTema(t){
+  prefTema=t;
+  ['negro','verde','azul','moderna','vibrante'].forEach(x=>{
+    const a=document.getElementById('tema-'+x); if(a) a.classList.toggle('active',x===(t||'negro'));
+    const b=document.getElementById('atema-'+x); if(b) b.classList.toggle('active',x===(t||'negro'));
+  });
+  document.body.classList.remove('tema-verde','tema-azul','tema-moderna','tema-vibrante');
+  if(t) document.body.classList.add('tema-'+t);
+  localStorage.setItem('lp_tema',t);
+  sonido('click');
+}
+function setVista(v){
+  prefVista=v;
+  ['compacta','normal','grande','enorme'].forEach(x=>{
+    const a=document.getElementById('vista-'+x); if(a) a.classList.toggle('active',x===(v||'normal'));
+    const b=document.getElementById('avista-'+x); if(b) b.classList.toggle('active',x===(v||'normal'));
+  });
+  document.body.classList.remove('vista-compacta','vista-grande','vista-enorme');
+  if(v) document.body.classList.add('vista-'+v);
+  localStorage.setItem('lp_vista',v);
+}
+function setSonido(s){
+  prefSonido=s;
+  ['casino','clasico','silencio'].forEach(x=>{
+    const a=document.getElementById('son-'+x); if(a) a.classList.toggle('active',x===s);
+    const b=document.getElementById('ason-'+x); if(b) b.classList.toggle('active',x===s);
+  });
+  localStorage.setItem('lp_sonido',s);
+  sonido('click');
+  if(s==='casino') musicaFondo.start();
+  else musicaFondo.stop();
+}
+function abrirApariencia(){
+  const m=document.getElementById('modalApariencia');
+  m.style.display='flex';
+}
+function cerrarApariencia(){
+  document.getElementById('modalApariencia').style.display='none';
+}
+function cargarPrefs(){
+  const t=localStorage.getItem('lp_tema')||'';
+  const v=localStorage.getItem('lp_vista')||'';
+  const s=localStorage.getItem('lp_sonido')||'casino';
+  setTema(t); setVista(v); setSonido(s);
+}
+// ══════════════════════════════════════
+//  MÚSICA DE FONDO — CASINO AMBIENTAL
+// ══════════════════════════════════════
+const musicaFondo = {
+  _ctx: null, _running: false, _gainNode: null,
+  getCtx(){
+    if(!this._ctx) this._ctx = new (window.AudioContext||window.webkitAudioContext)();
+    return this._ctx;
+  },
+  start(){
+    if(this._running) return;
+    this._running = true;
+    try {
+      const ac = this.getCtx();
+      // En la mayoría de los navegadores móviles, el AudioContext queda
+      // "suspendido" aunque se cree dentro de un toque del usuario — sin
+      // este resume() explícito, el código corre sin errores pero nunca
+      // sale sonido. Esto era lo que faltaba para que se escuchen las melodías.
+      if(ac.state === 'suspended') ac.resume();
+      this._gainNode = ac.createGain();
+      this._gainNode.gain.setValueAtTime(0.05, ac.currentTime);
+      this._gainNode.connect(ac.destination);
+      // Melodía que acompaña mientras el jugador navega — una frase fija
+      // que se repite (en vez de notas sueltas al azar), para que se sienta
+      // como una melodía real y no como timbres dispersos.
+      const notas = [220,247,262,294,330,294,262,247, 330,370,392,440,392,370,330,294, 440,494,523,494,440,392,370,330];
+      let _notaIdx = 0;
+      const loop = () => {
+        if(!this._running) return;
+        const o = ac.createOscillator();
+        const g = ac.createGain();
+        const nota = notas[_notaIdx % notas.length];
+        _notaIdx++;
+        o.type = 'sine';
+        o.frequency.value = nota;
+        g.gain.setValueAtTime(0, ac.currentTime);
+        g.gain.linearRampToValueAtTime(0.07, ac.currentTime + 0.08);
+        g.gain.exponentialRampToValueAtTime(0.001, ac.currentTime + 0.55);
+        o.connect(g); g.connect(this._gainNode);
+        o.start(); o.stop(ac.currentTime + 0.6);
+        setTimeout(loop, 420);
+      };
+      loop();
+    } catch(e){}
+  },
+  stop(){
+    this._running = false;
+    try { if(this._gainNode) this._gainNode.gain.setValueAtTime(0, this.getCtx().currentTime); } catch(e){}
+  }
+};
+
+// Arrancar música con primer toque del usuario
+const _startMusicaOnce = () => {
+  if(prefSonido === 'casino') musicaFondo.start();
+  document.removeEventListener('touchstart', _startMusicaOnce);
+  document.removeEventListener('click', _startMusicaOnce);
+};
+document.addEventListener('touchstart', _startMusicaOnce, { once: true });
+document.addEventListener('click', _startMusicaOnce, { once: true });
+
+cargarPrefs();
+
+// ══════════════════════════════════════
+//  SONIDO
+// ══════════════════════════════════════
+function sonido(tipo){
+  if(prefSonido==='silencio') return;
+  try {
+    const ctx = new (window.AudioContext||window.webkitAudioContext)();
+    const play = (freq,start,dur,wave='sine',vol=0.3,slide=0) => {
+      const o=ctx.createOscillator(), g=ctx.createGain();
+      o.connect(g); g.connect(ctx.destination);
+      o.type=wave; o.frequency.setValueAtTime(freq,ctx.currentTime+start);
+      if(slide) o.frequency.linearRampToValueAtTime(slide,ctx.currentTime+start+dur);
+      g.gain.setValueAtTime(vol,ctx.currentTime+start);
+      g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+start+dur);
+      o.start(ctx.currentTime+start); o.stop(ctx.currentTime+start+dur+0.01);
+    };
+    const noise = (start,dur,vol=0.1) => {
+      const buf=ctx.createBuffer(1,ctx.sampleRate*dur,ctx.sampleRate);
+      const d=buf.getChannelData(0); for(let i=0;i<d.length;i++) d[i]=Math.random()*2-1;
+      const src=ctx.createBufferSource(), g=ctx.createGain();
+      const filt=ctx.createBiquadFilter(); filt.type='bandpass'; filt.frequency.value=800;
+      src.buffer=buf; src.connect(filt); filt.connect(g); g.connect(ctx.destination);
+      g.gain.setValueAtTime(vol,ctx.currentTime+start);
+      g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+start+dur);
+      src.start(ctx.currentTime+start); src.stop(ctx.currentTime+start+dur+0.01);
+    };
+
+    if(prefSonido==='casino'){
+      if(tipo==='click'){
+        // Ficha de casino
+        play(1200,0,0.04,'square',0.15); noise(0,0.04,0.08);
+      }
+      if(tipo==='numero'){
+        // Tragamonedas — ruleta girando
+        play(800,0,0.05,'square',0.2); play(1000,0.04,0.05,'square',0.15); noise(0,0.08,0.12);
+      }
+      if(tipo==='enviar'){
+        // Monedas cayendo
+        [0,0.08,0.16,0.22,0.28].forEach((t,i)=>{ play(600+i*80,t,0.1,'square',0.2); noise(t,0.08,0.15); });
+      }
+      if(tipo==='autorizar'){
+        // Ding de casino
+        play(1047,0,0.15,'sine',0.3); play(1319,0.1,0.15,'sine',0.25); play(1568,0.2,0.3,'sine',0.2);
+      }
+      if(tipo==='sorteo'){
+        // Bolillero girando + números saliendo
+        for(let i=0;i<8;i++) noise(i*0.06,0.08,0.2);
+        [523,587,659,784,880,1047].forEach((f,i)=>play(f,0.5+i*0.1,0.15,'square',0.25));
+      }
+      if(tipo==='ganador'){
+        // JACKPOT — fanfarria completa
+        noise(0,0.1,0.3);
+        [523,659,784,1047].forEach((f,i)=>play(f,i*0.1,0.2,'square',0.3));
+        [784,988,1175,1319,1568,1319,1568,1760,1568].forEach((f,i)=>play(f,0.5+i*0.12,0.2,'sine',0.35));
+        for(let i=0;i<6;i++) noise(1.5+i*0.15,0.12,0.25);
+        [1047,1319,1568,2093].forEach((f,i)=>play(f,2.5+i*0.15,0.4,'sine',0.3));
+      }
+    }
+    if(prefSonido==='clasico'){
+      if(tipo==='click')    { play(880,0,0.08,'sine',0.1); }
+      if(tipo==='numero')   { play(1047,0,0.12,'sine',0.15); play(1319,0.1,0.08,'sine',0.1); }
+      if(tipo==='enviar')   { [523,659,784].forEach((f,i)=>play(f,i*0.15,0.2,'sine',0.2)); }
+      if(tipo==='autorizar'){ [784,988,1175].forEach((f,i)=>play(f,i*0.12,0.2,'sine',0.25)); }
+      if(tipo==='sorteo')   { [440,494,523,587,659,698,784].forEach((f,i)=>play(f,i*0.1,0.18,'sine',0.2)); }
+      if(tipo==='ganador')  { [392,494,587,784,988,1175,988,1175,1319,1568].forEach((f,i)=>play(f,i*0.14,0.28,'sine',0.28)); }
+    }
+  } catch(e){}
+}
+
+// ══════════════════════════════════════
+//  TOAST
+// ══════════════════════════════════════
+function showToast(msg,duration=3000){
+  const old=document.querySelector('.toast'); if(old) old.remove();
+  const t=document.createElement('div'); t.className='toast'; t.textContent=msg;
+  document.body.appendChild(t);
+  setTimeout(()=>{ t.style.transition='opacity 0.3s'; t.style.opacity='0'; setTimeout(()=>t.remove(),300); }, duration);
+}
+
+// ══════════════════════════════════════
+//  FIREBASE
+// ══════════════════════════════════════
+async function guardarEstado(){
+  const activos=players.filter(p=>p.status==='active');
+  const pozo=activos.reduce((s,p)=>s+p.apuesta,0);
+  // Si hay sesión de admin activa, mandamos su token — deja la puerta lista
+  // para que una futura regla de Firebase exija esta identidad real.
+  const authParam = (adminLogged && ADMIN_ID_TOKEN) ? `?auth=${ADMIN_ID_TOKEN}` : '';
+  try {
+    await fetch(`${FIREBASE_URL}/${PATH_DATA}.json${authParam}`,{
+      method:'PUT',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({
+        players, draws, gameOver,
+        // Datos visibles para el panel owner
+        stats:{
+          jugadores: activos.length,
+          jugadoresPendientes: players.filter(p=>p.status==='pending').length,
+          pozo,
+          sorteos: draws.length,
+          ultimoSorteo: draws.length?draws[draws.length-1].date:'—',
+          gameOver
+        }
+      })
+    });
+  } catch(e){}
+}
+async function cargarEstado(){
+  // Si esta lectura falla (sin señal un instante, por ejemplo), NO borramos
+  // lo que ya teníamos cargado — si lo borráramos, el conteo de pendientes
+  // volvería a "verse nuevo" en la próxima lectura exitosa y repetiría la
+  // notificación de una jugada que en realidad ya habíamos visto.
+  const res=await fetch(`${FIREBASE_URL}/${PATH_DATA}.json?nocache=${Date.now()}`);
+  if(!res.ok) throw new Error('http_'+res.status);
+  const data=await res.json();
+  players=data?.players||[]; draws=data?.draws||[]; gameOver=data?.gameOver||false;
+  const pendientes=players.filter(p=>p.status==='pending');
+  const nuevoPending=pendientes.length;
+  // Avisar solo por las jugadas pendientes que TODAVÍA no notificamos — la
+  // lista de "ya notificadas" se guarda en localStorage, así que sobrevive
+  // a que el navegador recargue la página en segundo plano (algo común en
+  // Android cuando el celular se bloquea), y no vuelve a sonar para una
+  // jugada que el admin ya vio antes.
+  const nuevasSinNotificar = pendientes.filter(p=>!_notificados.has(p.id));
+  if(nuevasSinNotificar.length>0){
+    notificarAdmin(`🔔 ${nuevasSinNotificar.length>1?'Nuevas jugadas pendientes':'Nueva jugada pendiente'} — ${nuevoPending} en total`);
+    if(Notification && Notification.permission==='granted'){
+      new Notification('🎰 La Polla — Jugadas pendientes',{body:`${nuevoPending} jugada${nuevoPending>1?'s':''} esperando autorización`});
+    } else if(Notification && Notification.permission!=='denied'){
+      Notification.requestPermission().then(p=>{ if(p==='granted') new Notification('🎰 La Polla',{body:`${nuevoPending} jugada${nuevoPending>1?'s':''} pendiente${nuevoPending>1?'s':''}`}); });
+    }
+    nuevasSinNotificar.forEach(p=>_notificados.add(p.id));
+    guardarNotificados(_notificados);
+  }
+  updatePozo(); renderTablero(); updateAdminNotif();
+  document.getElementById('dayLabel').textContent=draws.length?`Día ${draws.length}`:'Día 0';
+  if(adminLogged){ renderAdmin(); checkSorteoAuto(); }
+}
+function mostrarSync(ok){
+  const el=document.getElementById('syncIndicator'); if(!el) return;
+  el.textContent=ok?'● En vivo':'○ Sin conexión';
+  el.style.color=ok?'#8a6f2e':'#7a1515';
+}
+// Sincroniza cada 3 segundos para que las jugadas lleguen rápido al admin
+setInterval(async()=>{
+  try{ await cargarEstado(); mostrarSync(true); }
+  catch(e){ mostrarSync(false); }
+},3000);
+cargarEstado().then(()=>mostrarSync(true)).catch(()=>mostrarSync(false));
+
+async function sheetPost(data){
+  try { await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}); } catch(e){}
+}
+
+// ══════════════════════════════════════
+//  TABS
+// ══════════════════════════════════════
+function goTab(t){
+  ['inicio','jugar','tablero','admin','prefs'].forEach(id=>{
+    document.getElementById('panel-'+id).classList.toggle('active',id===t);
+    const tab=document.getElementById('tab-'+id);
+    if(tab) tab.classList.toggle('active',id===t);
+  });
+  if(t==='tablero') renderTablero();
+  if(t==='admin'&&adminLogged) renderAdmin();
+}
+
+// ══════════════════════════════════════
+//  GRIDS — con repetidos
+// ══════════════════════════════════════
+function pad(n){ return String(n).padStart(2,'0'); }
+
+function buildGrid(id, getSelFn, toggleFn){
+  const g=document.getElementById(id); g.innerHTML='';
+  for(let i=0;i<=99;i++){
+    const n=pad(i), c=document.createElement('div');
+    c.className='nc'; c.dataset.n=n;
+    c.textContent=n;
+    // Toque normal: agregar
+    c.addEventListener('click', ()=>{ toggleFn(n,'add'); sonido('numero'); });
+    // Toque largo: quitar uno
+    let lt=null;
+    c.addEventListener('pointerdown', ()=>{ lt=setTimeout(()=>{ toggleFn(n,'remove'); sonido('click'); },600); });
+    c.addEventListener('pointerup',   ()=>clearTimeout(lt));
+    c.addEventListener('pointerleave',()=>clearTimeout(lt));
+    g.appendChild(c);
+  }
+}
+
+function refreshGridCounts(id, sel){
+  const g=document.getElementById(id);
+  g.querySelectorAll('.nc').forEach(c=>{
+    const n=c.dataset.n;
+    const cnt=sel.filter(x=>x===n).length;
+    c.classList.toggle('picked',cnt>0);
+    let badge=c.querySelector('.badge');
+    if(cnt>1){
+      if(!badge){badge=document.createElement('span');badge.className='badge';c.appendChild(badge);}
+      badge.textContent=cnt;
+    } else { if(badge) badge.remove(); }
+  });
+}
+
+// Grid jugador
+buildGrid('jGrid', ()=>jSel, (n,op)=>{
+  if(op==='add'){ if(jSel.length>=10) return; jSel.push(n); }
+  else { const i=jSel.lastIndexOf(n); if(i>=0) jSel.splice(i,1); }
+  refreshGridCounts('jGrid',jSel); renderJStrip();
+});
+
+// Grid sorteo admin
+buildGrid('sGrid', ()=>sSel, (n,op)=>{
+  if(op==='add'){ if(sSel.length>=MODO_SORTEO) return; sSel.push(n); }
+  else { const i=sSel.lastIndexOf(n); if(i>=0) sSel.splice(i,1); }
+  refreshGridCounts('sGrid',sSel); renderSStrip();
+});
+
+function renderJStrip(){
+  const d=document.getElementById('jStrip'),cnt=document.getElementById('jCount'),hint=document.getElementById('jHint');
+  cnt.textContent=jSel.length;
+  hint.textContent=jSel.length===10?'¡Listo! ✓':`Faltan ${10-jSel.length}`;
+  hint.style.color=jSel.length===10?'var(--gold2)':'var(--gold)';
+  if(!jSel.length){d.innerHTML='<span class="strip-placeholder">Ninguno aún — tocá la grilla</span>';return;}
+  // Agrupar para mostrar con cantidad
+  const counts={};
+  jSel.forEach(n=>counts[n]=(counts[n]||0)+1);
+  d.innerHTML=[...new Set(jSel)].sort().map(n=>`<span class="sel-chip" onclick="quitarUnoJ('${n}')">${n}${counts[n]>1?` x${counts[n]}`:''}</span>`).join('');
+}
+function quitarUnoJ(n){ const i=jSel.lastIndexOf(n); if(i>=0){jSel.splice(i,1);refreshGridCounts('jGrid',jSel);renderJStrip();} }
+
+function renderSStrip(){
+  const d=document.getElementById('sStrip');
+  document.getElementById('sCount').textContent=sSel.length;
+  const counts={};
+  sSel.forEach(n=>counts[n]=(counts[n]||0)+1);
+  d.innerHTML=[...new Set(sSel)].sort().map(n=>`<span class="sel-chip" onclick="quitarUnoS('${n}')">${n}${counts[n]>1?` x${counts[n]}`:''}</span>`).join('');
+}
+function quitarUnoS(n){ const i=sSel.lastIndexOf(n); if(i>=0){sSel.splice(i,1);refreshGridCounts('sGrid',sSel);renderSStrip();} }
+
+function anularJugada(){ jSel=[]; jugadasTemp=[]; _apuestaFija=null; const ai=document.getElementById('jApuesta'); ai.readOnly=false; ai.style.opacity='1'; ai.value=''; aplicarMontoMinimoSugerido(); refreshGridCounts('jGrid',jSel); renderJStrip(); renderJugadasTemp(); document.getElementById('jNumLabel').textContent='1'; showToast('🗑 Jugada anulada'); }
+function anularSorteo(){ sSel=[]; refreshGridCounts('sGrid',sSel); renderSStrip(); showToast('🗑 Sorteo anulado'); }
+
+// ══════════════════════════════════════
+//  JUGADA MÚLTIPLE
+// ══════════════════════════════════════
+function agregarJugada(){
+  const nombre=document.getElementById('jNombre').value.trim();
+  const apuestaInput=document.getElementById('jApuesta');
+  let apuesta=parseFloat(apuestaInput.value);
+  const al=document.getElementById('jAlert');
+  if(!nombre){showAlert(al,'err','Ingresá tu nombre.');return;}
+  if(!apuesta||apuesta<=0){showAlert(al,'err','Ingresá un monto válido.');return;}
+  if(jSel.length!==10){showAlert(al,'err','Debés elegir exactamente 10 números.');return;}
+  // Cada boleta tiene su propio precio — se permite el mismo monto en jugadas sucesivas.
+  jugadasTemp.push({numeros:[...jSel],apuesta});
+  jSel=[];
+  refreshGridCounts('jGrid',jSel); renderJStrip(); renderJugadasTemp();
+  document.getElementById('jNumLabel').textContent=jugadasTemp.length+1;
+  showAlert(al,'ok',`✅ Jugada ${jugadasTemp.length} guardada ($${apuesta.toLocaleString('es-AR')}). Para agregar otra, modificá el monto.`);
+}
+function quitarJugadaTemp(i){ jugadasTemp.splice(i,1); renderJugadasTemp(); document.getElementById('jNumLabel').textContent=jugadasTemp.length+1; }
+function renderJugadasTemp(){
+  const cont=document.getElementById('jugadasAgregadas'), list=document.getElementById('jugadasList');
+  if(!jugadasTemp.length){cont.style.display='none';return;}
+  cont.style.display='block';
+  list.innerHTML=jugadasTemp.map((j,i)=>{
+    const counts={}; j.numeros.forEach(n=>counts[n]=(counts[n]||0)+1);
+    const nums=[...new Set(j.numeros)].sort().map(n=>n+(counts[n]>1?` x${counts[n]}`:'')).join(' · ');
+    return `<div style="display:flex;align-items:center;justify-content:space-between;padding:7px 9px;margin-bottom:5px;background:var(--bg2);border:1px solid var(--gold-dim);border-radius:3px">
+      <div><div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:2px">JUGADA ${i+1} · $${j.apuesta}</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text)">${nums}</div></div>
+      <button onclick="quitarJugadaTemp(${i})" style="background:none;border:none;color:var(--red2);font-size:17px;cursor:pointer">✕</button>
+    </div>`;
+  }).join('');
+  // Total a pagar — cada boleta se cobra por separado, esto lo hace explícito
+  const total=jugadasTemp.reduce((s,j)=>s+(j.apuesta||0),0);
+  list.innerHTML+=`<div style="display:flex;justify-content:space-between;padding:9px 9px 2px;margin-top:4px;border-top:1px dashed var(--gold-dim);font-family:'Share Tech Mono',monospace">
+    <span style="color:var(--text-mid);font-size:11px;letter-spacing:1px">TOTAL A PAGAR (${jugadasTemp.length} boleta${jugadasTemp.length>1?'s':''})</span>
+    <span style="color:var(--gold);font-size:14px;font-weight:bold">$${total.toLocaleString('es-AR')}</span>
+  </div>`;
+}
+
+async function enviarJugada(){
+  const nombre=document.getElementById('jNombre').value.trim();
+  const telefono=document.getElementById('jTelefono').value.trim();
+  const apuesta=parseFloat(document.getElementById('jApuesta').value);
+  const al=document.getElementById('jAlert');
+  if(!nombre){showAlert(al,'err','Ingresá tu nombre.');return;}
+  if(gameOver){showAlert(al,'err','El juego ya terminó.');return;}
+  if(jSel.length===10){
+    if(!apuesta||apuesta<=0){showAlert(al,'err','Ingresá un monto válido.');return;}
+    jugadasTemp.push({numeros:[...jSel],apuesta});
+  } else if(jSel.length>0&&jSel.length<10){
+    showAlert(al,'err','La jugada actual necesita 10 números o anulala.');return;
+  }
+  if(!jugadasTemp.length){
+    if(!apuesta||apuesta<=0){showAlert(al,'err','Ingresá un monto válido.');return;}
+    showAlert(al,'err','Debés elegir exactamente 10 números.');return;
+  }
+  const fecha=new Date().toLocaleDateString('es-AR');
+  const hora=new Date().toLocaleTimeString('es-AR');
+  jugadasTemp.forEach((j,i)=>{
+    players.push({id:Date.now()+i,nombre:`${nombre}${jugadasTemp.length>1?' J'+(i+1):''}`,telefono,apuesta:j.apuesta,numeros:j.numeros,status:'pending',fecha,hora});
+    sheetPost({sheet:'Jugadores',action:'append',row:[nombre,telefono,j.apuesta,j.numeros.join(','),'pending',fecha]});
+  });
+  jSel=[]; jugadasTemp=[]; _apuestaFija=null;
+  document.getElementById('jNombre').value='';
+  document.getElementById('jTelefono').value='';
+  const jAp=document.getElementById('jApuesta');
+  jAp.value=''; jAp.readOnly=false; jAp.style.opacity='1';
+  aplicarMontoMinimoSugerido();
+  document.getElementById('jNumLabel').textContent='1';
+  refreshGridCounts('jGrid',jSel); renderJStrip(); renderJugadasTemp();
+  await guardarEstado();
+  updatePozo(); updateAdminNotif();
+  showAlert(al,'ok','✅ Jugada(s) enviadas. Esperá la autorización del Admin.');
+  showToast('📨 Tu jugada fue enviada al organizador');
+  sonido('enviar');
+}
+
+// ══════════════════════════════════════
+//  ADMIN
+// ══════════════════════════════════════
+async function loginAdmin(){
+  const pass=document.getElementById('adminPass').value;
+  const al=document.getElementById('adminAlert');
+  const btn=document.getElementById('btnLoginAdmin');
+  if(btn){ btn.disabled=true; }
+  try{
+    await iniciarSesionAdminFirebase(pass);
+  }catch(e){
+    if(btn) btn.disabled=false;
+    const msg=String(e.message||'');
+    if(msg.includes('EMAIL_NOT_FOUND')){
+      showAlert(al,'err','Esta sala todavía no tiene credencial creada. Pedile al dueño que use "Recrear credencial" en el panel.');
+    }else if(msg.includes('INVALID_PASSWORD')||msg.includes('INVALID_LOGIN_CREDENTIALS')){
+      showAlert(al,'err','Contraseña incorrecta.');
+    }else{
+      showAlert(al,'err','No se pudo verificar — revisá tu conexión y probá de nuevo.');
+    }
+    return;
+  }
+  if(btn) btn.disabled=false;
+  adminLogged=true;
+  document.getElementById('adminLock').style.display='none';
+  document.getElementById('adminContent').style.display='block';
+  const ba=document.getElementById('btnAjustes'); if(ba) ba.style.display='block';
+  renderAdmin(); updateAdminNotif(); checkFirebaseExpiry();
+}
+function logoutAdmin(){
+  adminLogged=false;
+  cerrarSesionAdminFirebase();
+  document.getElementById('adminLock').style.display='block';
+  document.getElementById('adminContent').style.display='none';
+  const ba=document.getElementById('btnAjustes'); if(ba) ba.style.display='none';
+  document.getElementById('adminPass').value='';
+  const t=document.getElementById('tab-admin');
+  t.style.display='none'; t.classList.remove('visible');
+  goTab('inicio');
+}
+function renderAdmin(){ renderPending(); renderHistorial(); renderHistorialComisiones(); document.getElementById('sorteoSub').textContent=`Día ${draws.length+1} — Cargá los 10 números del sorteo.`; }
+
+function renderPending(){
+  const list=document.getElementById('pendingList');
+  const pending=players.filter(p=>p.status==='pending');
+  list.innerHTML=pending.length?pending.map(p=>{
+    const counts={}; p.numeros.forEach(n=>counts[n]=(counts[n]||0)+1);
+    const nums=[...new Set(p.numeros)].sort().map(n=>n+(counts[n]>1?` x${counts[n]}`:'')).join(', ');
+    return `<div class="pending-item">
+      <div class="pending-item-info">
+        <div class="pending-item-name">${p.nombre}</div>
+        <div class="pending-item-nums">${nums} · $${p.apuesta}</div>
+      </div>
+      <div class="pending-actions">
+        <button class="btn btn-violet btn-sm" onclick="autorizar(${p.id})">✅</button>
+        <button class="btn btn-crimson btn-sm" onclick="rechazar(${p.id})">✕</button>
+      </div>
+    </div>`;
+  }).join(''):'<div class="empty">Sin jugadores pendientes.</div>';
+}
+
+function updateAdminNotif(){
+  const n=players.filter(p=>p.status==='pending').length;
+  const el=document.getElementById('tab-admin');
+  let badge=el.querySelector('.notif');
+  if(n>0){
+    if(!badge){badge=document.createElement('span');badge.className='notif';el.appendChild(badge);}
+    badge.textContent=n>9?'9+':n;
+  } else { if(badge) badge.remove(); }
+}
+function autorizar(id){
+  const p=players.find(x=>x.id===id); if(!p)return;
+  p.status='active';
+  guardarEstado();
+  sheetPost({sheet:'Jugadores',action:'updateStatus',nombre:p.nombre,status:'active'});
+  updatePozo(); renderAdmin(); updateAdminNotif(); renderTablero();
+  showToast(`✅ ${p.nombre} autorizado`);
+  sonido('autorizar');
+}
+function rechazar(id){
+  const p=players.find(x=>x.id===id); if(!p)return;
+  const nombre=p.nombre;
+  sheetPost({sheet:'Jugadores',action:'updateStatus',nombre,status:'rechazado'});
+  players=players.filter(x=>x.id!==id);
+  guardarEstado(); updatePozo(); renderAdmin(); updateAdminNotif();
+  showToast(`✕ ${nombre} rechazado`);
+}
+
+// ══════════════════════════════════════
+//  SORTEO — con repetidos y aciertos exactos
+// ══════════════════════════════════════
+async function procesarSorteo(){
+  const al=document.getElementById('sAlert');
+  if(gameOver){showAlert(al,'err','El juego ya terminó.');return;}
+  if(!players.filter(p=>p.status==='active').length){showAlert(al,'err','No hay jugadores autorizados.');return;}
+  if(sSel.length!==MODO_SORTEO){showAlert(al,'err',`Debés ingresar exactamente ${MODO_SORTEO} números.`);return;}
+  al.classList.remove('show');
+  const dayNum=draws.length+1;
+  const today=new Date().toLocaleDateString('es-AR',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+  const nums=[...sSel];
+  draws.push({day:dayNum,date:today,numbers:nums});
+  historialSorteos.push({day:dayNum,date:today,numbers:nums});
+  guardarHistorialSorteo(nums,dayNum,today);
+
+  // ── Aciertos exactos por cantidad ──
+  let winner=null;
+  players.filter(p=>p.status==='active').forEach(p=>{
+    const allDrawn=draws.flatMap(d=>d.numbers);
+    // Contar cuántas veces cada número aparece en jugada vs sorteo acumulado
+    const jugCounts={}, drawCounts={};
+    p.numeros.forEach(n=>jugCounts[n]=(jugCounts[n]||0)+1);
+    allDrawn.forEach(n=>drawCounts[n]=(drawCounts[n]||0)+1);
+    const completo=Object.entries(jugCounts).every(([n,cnt])=>(drawCounts[n]||0)>=cnt);
+    if(completo) winner=p;
+  });
+
+  sSel=[]; refreshGridCounts('sGrid',sSel); renderSStrip();
+  await guardarEstado();
+  sheetPost({sheet:'Sorteos',action:'append',row:[today,nums.join(','),dayNum]});
+  renderHistorial(); renderTablero();
+  document.getElementById('dayLabel').textContent=`Día ${dayNum}`;
+  document.getElementById('sorteoSub').textContent=`Día ${dayNum+1} — Cargá los números.`;
+  sonido('sorteo');
+  if(winner){
+    gameOver=true;
+    const total=players.filter(p=>p.status==='active').reduce((s,p)=>s+p.apuesta,0);
+    await guardarEstado();
+    setTimeout(()=>{ showWinner(winner,total,dayNum); sonido('ganador'); },800);
+  }
+}
+
+function renderHistorial(){
+  const h=document.getElementById('historialSorteos');
+  if(!draws.length){h.innerHTML='<div class="empty">Sin sorteos aún.</div>';return;}
+  const allDrawn=draws.flatMap(d=>d.numbers);
+  const hasW=players.some(p=>{
+    if(p.status!=='active') return false;
+    const jc={},dc={};
+    p.numeros.forEach(n=>jc[n]=(jc[n]||0)+1);
+    allDrawn.forEach(n=>dc[n]=(dc[n]||0)+1);
+    return Object.entries(jc).every(([n,c])=>(dc[n]||0)>=c);
+  });
+  const cls=['ball-d1','ball-d2','ball-d3'];
+  h.innerHTML=draws.map((d,i)=>{
+    const isLast=i===draws.length-1;
+    const tag=(isLast&&hasW)?`<div class="day-tag-ok">GANADOR</div>`:`<div class="day-tag-no">SIN GANADOR</div>`;
+    return `<div class="day-card"><div class="day-hdr"><div class="day-pill">DÍA ${d.day}</div><div class="day-date-lbl">${d.date}</div>${tag}</div><div class="day-balls">${d.numbers.map(n=>`<div class="ball ${cls[Math.min(i,2)]}">${n}</div>`).join('')}</div></div>`;
+  }).join('');
+  // Actualizar marquesina con último sorteo
+  if(typeof actualizarMarquesina === 'function') actualizarMarquesina(draws);
+}
+
+// ══════════════════════════════════════
+//  TABLERO + RANKING PÚBLICO
+// ══════════════════════════════════════
+function calcHits(jugNums, allDrawn){
+  // Aciertos exactos por cantidad
+  const jc={}, dc={};
+  jugNums.forEach(n=>jc[n]=(jc[n]||0)+1);
+  allDrawn.forEach(n=>dc[n]=(dc[n]||0)+1);
+  let hits=0;
+  Object.entries(jc).forEach(([n,cnt])=>{ hits+=Math.min(cnt,dc[n]||0); });
+  return hits;
+}
+
+
+// ══════════════════════════════════════
+//  ESTADÍSTICAS DE NÚMEROS
+// ══════════════════════════════════════
+function renderEstadisticas(){
+  const elNoSalieron=document.getElementById('statsNoSalieron');
+  const elCalientes=document.getElementById('statsCalientes');
+  const elFrios=document.getElementById('statsFrios');
+  const elPozoNeto=document.getElementById('pozoNeto');
+  if(!elNoSalieron) return;
+
+  // Actualizar pozoNeto en tablero (mismo criterio que updatePozo: PCT_GANADOR directo)
+  const activos=players.filter(p=>p.status==='active');
+  const total=activos.reduce((s,p)=>s+p.apuesta,0);
+  const neto=Math.round(total*(PCT_GANADOR/100));
+  if(elPozoNeto) elPozoNeto.textContent=activos.length>=2?('$ '+neto.toLocaleString('es-AR')):'$ —';
+
+  // Combinamos el historial permanente con la partida actual (por si todavía
+  // no se migró nada al historial, no perdemos lo ya jugado hoy)
+  const todosLosSorteos = [...historialSorteos, ...draws];
+  if(!todosLosSorteos.length){
+    const msg='<div style="font-family:Share Tech Mono,monospace;font-size:12px;color:var(--text-dim)">Sin sorteos aún.</div>';
+    elNoSalieron.innerHTML=msg; elCalientes.innerHTML=msg; elFrios.innerHTML=msg; return;
+  }
+
+  // Contar frecuencias de todos los números
+  const freq={};
+  for(let i=0;i<=99;i++) freq[String(i).padStart(2,'0')]=0;
+  todosLosSorteos.forEach(d=>d.numbers.forEach(n=>{ if(freq[n]!==undefined) freq[n]++; }));
+
+  // Los que no salieron nunca
+  const noSalieron=Object.entries(freq).filter(([n,c])=>c===0).map(([n])=>n);
+  if(noSalieron.length){
+    elNoSalieron.innerHTML=noSalieron.slice(0,20).map(n=>
+      `<span style="font-family:'Share Tech Mono',monospace;font-size:15px;font-weight:700;padding:5px 9px;background:rgba(201,168,76,0.15);border:1px solid var(--gold3);border-radius:3px;color:var(--gold2)">${n}</span>`
+    ).join('');
+    if(noSalieron.length>20) elNoSalieron.innerHTML+=`<span style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text-dim);padding:5px">+${noSalieron.length-20} más</span>`;
+  } else { elNoSalieron.innerHTML='<div style="font-family:Share Tech Mono,monospace;font-size:12px;color:var(--text-dim)">¡Ya salieron todos alguna vez!</div>'; }
+
+  // Los más frecuentes (top 10)
+  const calientes=Object.entries(freq).filter(([n,c])=>c>0).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  elCalientes.innerHTML=calientes.map(([n,c])=>
+    `<span style="display:inline-flex;flex-direction:column;align-items:center;font-family:'Share Tech Mono',monospace;padding:5px 8px;background:rgba(122,21,21,0.2);border:1px solid var(--red2);border-radius:3px;gap:2px"><span style="font-size:16px;font-weight:700;color:#e08080">${n}</span><span style="font-size:10px;color:var(--text-dim)">${c}x</span></span>`
+  ).join('');
+
+  // Los menos frecuentes (últimos 10, solo los que salieron al menos una vez)
+  const frios=Object.entries(freq).filter(([n,c])=>c>0).sort((a,b)=>a[1]-b[1]).slice(0,10);
+  elFrios.innerHTML=frios.map(([n,c])=>
+    `<span style="display:inline-flex;flex-direction:column;align-items:center;font-family:'Share Tech Mono',monospace;padding:5px 8px;background:rgba(40,60,120,0.2);border:1px solid #2a4a9a;border-radius:3px;gap:2px"><span style="font-size:16px;font-weight:700;color:#80aaff">${n}</span><span style="font-size:10px;color:var(--text-dim)">${c}x</span></span>`
+  ).join('');
+}
+
+
+// ══════════════════════════════════════
+//  🤖 JUGADA SUGERIDA POR IA
+// ══════════════════════════════════════
+let iaJugadaActual=null;
+async function generarJugadaIA(){
+  const btn=document.getElementById('btnIASugiere');
+  const res=document.getElementById('iaSugerencia');
+  const nums=document.getElementById('iaNumeros');
+  btn.disabled=true;
+  btn.textContent='⏳ Analizando historial...';
+  res.textContent='Analizando el historial de sorteos...';
+  nums.style.display='none';
+
+  // Usa el historial permanente + la partida actual — mezcla "fríos"
+  // (números que menos salieron, candidatos a "deber" salir) con algunos
+  // "calientes" (los más frecuentes). Es una heurística simple, no IA real,
+  // pero funciona siempre — no depende de ningún servicio externo.
+  const todosLosSorteos=[...historialSorteos, ...draws];
+  const freq={};
+  for(let i=0;i<=99;i++) freq[String(i).padStart(2,'0')]=0;
+  todosLosSorteos.forEach(d=>d.numbers.forEach(n=>{if(freq[n]!==undefined)freq[n]++;}));
+
+  const entries=Object.entries(freq);
+  const tieneHistorial=todosLosSorteos.length>0;
+  const noSalieron=entries.filter(([n,c])=>c===0).map(([n])=>n);
+  const ordenMenor=[...entries].sort((a,b)=>a[1]-b[1]).map(([n])=>n);
+  const calientes=entries.filter(([n,c])=>c>0).sort((a,b)=>b[1]-a[1]).slice(0,15).map(([n])=>n);
+
+  await new Promise(r=>setTimeout(r,500)); // breve pausa para que se note que "analizó"
+
+  const sugeridos=[];
+  const frios=(noSalieron.length>=6?noSalieron:ordenMenor).slice();
+  while(sugeridos.length<6 && frios.length){
+    sugeridos.push(frios.splice(Math.floor(Math.random()*frios.length),1)[0]);
+  }
+  const calientesDisp=calientes.filter(n=>!sugeridos.includes(n));
+  while(sugeridos.length<10 && calientesDisp.length){
+    sugeridos.push(calientesDisp.splice(Math.floor(Math.random()*calientesDisp.length),1)[0]);
+  }
+  while(sugeridos.length<10){
+    const r=String(Math.floor(Math.random()*100)).padStart(2,'0');
+    if(!sugeridos.includes(r)) sugeridos.push(r);
+  }
+
+  res.textContent = tieneHistorial
+    ? 'Mezcla de números que casi no salieron (estadísticamente "atrasados") con algunos de los más frecuentes históricamente en esta sala.'
+    : 'Todavía no hay sorteos registrados en esta sala, así que esta sugerencia es al azar. Con más historial, las próximas van a tener más sustento.';
+  iaJugadaActual=sugeridos.slice();
+  nums.style.display='flex';
+  nums.innerHTML=sugeridos.map(n=>
+    `<span style="font-family:'Share Tech Mono',monospace;font-size:17px;font-weight:700;padding:7px 12px;background:rgba(42,74,154,0.2);border:1px solid #2a4a9a;border-radius:3px;color:#80aaff">${n}</span>`
+  ).join('');
+  const cargarBtn=document.getElementById('btnIACargar');
+  if(cargarBtn) cargarBtn.style.display='block';
+  btn.disabled=false;
+  btn.textContent='🔄 Generar otra jugada';
+}
+
+function cargarJugadaIA(){
+  if(!iaJugadaActual||iaJugadaActual.length!==10){ showToast('Generá una sugerencia primero'); return; }
+  if(!confirm('¿Cargar estos 10 números en tu jugada? Se reemplaza la selección actual.')) return;
+  jSel=iaJugadaActual.slice();
+  refreshGridCounts('jGrid',jSel);
+  renderJStrip();
+  showToast('✅ Jugada sugerida cargada — revisala y enviá al admin');
+  goTab('jugar');
+  document.getElementById('panel-jugar').scrollIntoView({behavior:'smooth'});
+}
+
+function renderTablero(){
+  renderEstadisticas();
+  const list=document.getElementById('tableroList');
+  const ranking=document.getElementById('rankingPublico');
+  const activos=players.filter(p=>p.status==='active');
+  if(!activos.length){
+    list.innerHTML='<div class="empty">Aún no hay jugadores autorizados.</div>';
+    ranking.innerHTML='<div class="empty">Sin jugadores aún.</div>';
+    return;
+  }
+  const allDrawn=draws.flatMap(d=>d.numbers);
+  const ordenados=[...activos].map(p=>{
+    const hits=calcHits(p.numeros,allDrawn);
+    const jc={},dc={};
+    p.numeros.forEach(n=>jc[n]=(jc[n]||0)+1);
+    allDrawn.forEach(n=>dc[n]=(dc[n]||0)+1);
+    const isW=Object.entries(jc).every(([n,c])=>(dc[n]||0)>=c);
+    return {...p,hits,isW};
+  }).sort((a,b)=>b.hits-a.hits);
+
+  const medallas=['🥇','🥈','🥉'];
+  ranking.innerHTML=ordenados.map((p,i)=>{
+    const pct=Math.round((p.hits/10)*100);
+    const medal=p.isW?'🏆':(medallas[i]||`${i+1}°`);
+    return `<div style="display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:19px;width:26px;text-align:center">${medal}</div>
+      <div style="flex:1">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text);margin-bottom:3px">${p.nombre}</div>
+        <div style="background:var(--bg2);border-radius:2px;height:6px;overflow:hidden">
+          <div style="height:100%;width:${pct}%;background:${p.isW?'#c9a84c':pct>=70?'#8a6f2e':pct>=40?'#4a3c18':'var(--border)'};transition:width 0.5s"></div>
+        </div>
+      </div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:13px;color:${p.isW?'var(--gold2)':'var(--text-mid)'};min-width:38px;text-align:right">${p.hits}/10</div>
+    </div>`;
+  }).join('');
+
+  list.innerHTML=ordenados.map(p=>{
+    const allD=draws.flatMap(d=>d.numbers);
+    const nums=p.numeros.map((n,idx)=>{
+      // Ver si este número en esta posición ya salió (conteo por orden)
+      const jugC={},drC={};
+      p.numeros.slice(0,idx+1).forEach(x=>jugC[x]=(jugC[x]||0)+1);
+      allD.forEach(x=>drC[x]=(drC[x]||0)+1);
+      const hit=(drC[n]||0)>=(jugC[n]||0);
+      let cls=hit?'h1':'';
+      // Colorear por día
+      if(hit){
+        for(let d=0;d<draws.length;d++){
+          const dc2={}; draws.slice(0,d+1).flatMap(x=>x.numbers).forEach(x=>dc2[x]=(dc2[x]||0)+1);
+          if((dc2[n]||0)>=(jugC[n]||0)){cls=['h1','h2','h3'][Math.min(d,2)];break;}
+        }
+      }
+      if(p.isW&&cls) cls='hw';
+      return `<span class="pn ${cls}">${n}</span>`;
+    }).join('');
+    return `<div class="player-card ${p.isW?'winner-p':'active-p'}">
+      <div class="pc-top">
+        <div class="pc-avatar ${p.isW?'av-winner':'av-active'}">${p.nombre[0].toUpperCase()}</div>
+        <div class="pc-info">
+          <div class="pc-name">${p.nombre} ${p.isW?'🏆':''}</div>
+          <div class="pc-status ${p.isW?'st-winner':'st-active'}">${p.isW?'🏆 GANADOR':p.hits+'/10 aciertos'}</div>
+          <div class="rank-bar-bg"><div class="rank-bar-fill" style="width:${Math.round((p.hits/10)*100)}%"></div></div>
+        </div>
+        <div class="pc-score"><div class="pc-score-num">${p.hits}</div><div class="pc-score-den">DE 10</div></div>
+      </div>
+      <div class="pc-nums">${nums}</div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+//  VERIFICAR JUGADA
+// ══════════════════════════════════════
+function verificarJugada(){
+  const nombre=document.getElementById('verificarNombre').value.trim().toLowerCase();
+  const result=document.getElementById('verificarResult');
+  if(!nombre){result.innerHTML='<div style="color:#e08080;font-size:13px">Ingresá tu nombre.</div>';return;}
+  const encontrados=players.filter(p=>p.nombre.toLowerCase().includes(nombre)&&p.status==='active');
+  if(!encontrados.length){result.innerHTML='<div style="color:#e08080;font-family:Share Tech Mono,monospace;font-size:12px">No encontrado o aún no autorizado.</div>';return;}
+  const allDrawn=draws.flatMap(d=>d.numbers);
+  result.innerHTML=encontrados.map(p=>{
+    const hits=calcHits(p.numeros,allDrawn);
+    const pct=Math.round((hits/10)*100);
+    const jc={},dc={};
+    p.numeros.forEach(n=>jc[n]=(jc[n]||0)+1);
+    allDrawn.forEach(n=>dc[n]=(dc[n]||0)+1);
+    const isW=Object.entries(jc).every(([n,c])=>(dc[n]||0)>=c);
+    const nums=p.numeros.map((n,idx)=>{
+      const jcP={}; p.numeros.slice(0,idx+1).forEach(x=>jcP[x]=(jcP[x]||0)+1);
+      const hit=(dc[n]||0)>=(jcP[n]||0);
+      return `<span style="font-family:'Share Tech Mono',monospace;font-size:16px;font-weight:700;padding:5px 10px;border-radius:2px;background:${hit?'rgba(201,168,76,0.2)':'var(--bg2)'};border:1px solid ${hit?'var(--gold)':'var(--border)'};color:${hit?'var(--gold2)':'var(--text-dim)'}">${n}${hit?' ✓':''}</span>`;
+    }).join('');
+    return `<div style="background:var(--bg2);border:1px solid ${isW?'var(--gold)':'var(--border)'};border-radius:3px;padding:11px;margin-bottom:7px">
+      <div style="font-family:'Playfair Display',serif;font-size:17px;font-weight:700;color:var(--cream);margin-bottom:5px">${p.nombre} ${isW?'🏆':''}</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);margin-bottom:7px">${hits}/10 aciertos · ${pct}%</div>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:7px">${nums}</div>
+      <div style="background:var(--bg);border-radius:2px;height:7px;overflow:hidden"><div style="height:100%;width:${pct}%;background:linear-gradient(90deg,var(--gold-dim),var(--gold));transition:width 0.7s"></div></div>
+    </div>`;
+  }).join('');
+}
+
+// ══════════════════════════════════════
+//  MODO SORTEO — 10 o 20 NÚMEROS
+// ══════════════════════════════════════
+function setModoSorteo(n){
+  MODO_SORTEO = n;
+  localStorage.setItem('lp_modoSorteo', n);
+  document.getElementById('modo10').classList.toggle('active', n===10);
+  document.getElementById('modo20').classList.toggle('active', n===20);
+  document.getElementById('modo10').style.background = n===10 ? 'var(--gold-dim)' : 'var(--surface)';
+  document.getElementById('modo10').style.color = n===10 ? 'var(--gold2)' : 'var(--text-dim)';
+  document.getElementById('modo20').style.background = n===20 ? 'var(--gold-dim)' : 'var(--surface)';
+  document.getElementById('modo20').style.color = n===20 ? 'var(--gold2)' : 'var(--text-dim)';
+  document.getElementById('sMaxLabel').textContent = n;
+  // Vaciar selección si supera el nuevo máximo
+  if(sSel.length > n){ sSel = sSel.slice(0, n); refreshGridCounts('sGrid', sSel); renderSStrip(); }
+}
+// Aplicar al cargar
+(function initModoSorteo(){
+  setTimeout(()=>{
+    const el10=document.getElementById('modo10'), el20=document.getElementById('modo20');
+    if(el10 && el20){
+      el10.classList.toggle('active', MODO_SORTEO===10);
+      el20.classList.toggle('active', MODO_SORTEO===20);
+      el10.style.background = MODO_SORTEO===10 ? 'var(--gold-dim)' : 'var(--surface)';
+      el10.style.color = MODO_SORTEO===10 ? 'var(--gold2)' : 'var(--text-dim)';
+      el20.style.background = MODO_SORTEO===20 ? 'var(--gold-dim)' : 'var(--surface)';
+      el20.style.color = MODO_SORTEO===20 ? 'var(--gold2)' : 'var(--text-dim)';
+      const lbl=document.getElementById('sMaxLabel');
+      if(lbl) lbl.textContent = MODO_SORTEO;
+    }
+  }, 300);
+})();
+
+// ══════════════════════════════════════
+//  CARGA POR FOTO — OCR (Tesseract.js)
+// ══════════════════════════════════════
+// Preprocesa la foto antes de pasarla al OCR: la convierte a blanco/negro puro
+// (umbral calculado según el brillo promedio de la imagen, así sirve tanto para
+// capturas de apps con tema claro como oscuro) y la agranda si es chica — esto
+// mejora mucho la precisión de Tesseract leyendo números de interfaz.
+function preprocesarImagenOCR(file){
+  return new Promise((resolve,reject)=>{
+    const img=new Image();
+    img.onload=()=>{
+      const scale = img.width<900 ? 2 : 1;
+      const canvas=document.createElement('canvas');
+      canvas.width=img.width*scale; canvas.height=img.height*scale;
+      const ctx=canvas.getContext('2d');
+      ctx.drawImage(img,0,0,canvas.width,canvas.height);
+      const id=ctx.getImageData(0,0,canvas.width,canvas.height);
+      const d=id.data;
+      const grises=new Float32Array(d.length/4);
+      let suma=0;
+      for(let i=0,j=0;i<d.length;i+=4,j++){
+        const g=d[i]*0.299+d[i+1]*0.587+d[i+2]*0.114;
+        grises[j]=g; suma+=g;
+      }
+      const promedio=suma/grises.length;
+      for(let i=0,j=0;i<d.length;i+=4,j++){
+        const v=grises[j]>promedio?255:0;
+        d[i]=d[i+1]=d[i+2]=v;
+      }
+      ctx.putImageData(id,0,0);
+      canvas.toBlob(blob=>resolve(blob),'image/png');
+    };
+    img.onerror=()=>reject(new Error('No se pudo procesar la imagen'));
+    img.src=URL.createObjectURL(file);
+  });
+}
+let _ocrSession = 0;
+function cancelarOCR(){
+  _ocrSession++; // invalida cualquier lectura de OCR que haya quedado en curso
+  document.getElementById('ocrFileInput').value='';
+  document.getElementById('ocrPreview').style.display='none';
+  document.getElementById('ocrResultados').innerHTML='';
+  document.getElementById('ocrStatus').textContent='';
+  document.getElementById('btnOcr').disabled=false;
+}
+async function procesarImagenOCR(input){
+  const file = input.files[0];
+  if(!file) return;
+  const miSesion = ++_ocrSession; // si el usuario cambia de imagen mientras esto corre, este resultado se descarta
+  const status = document.getElementById('ocrStatus');
+  const preview = document.getElementById('ocrPreview');
+  const imgPreview = document.getElementById('ocrImgPreview');
+  const resultados = document.getElementById('ocrResultados');
+  const btn = document.getElementById('btnOcr');
+
+  // Mostrar preview de la imagen — esto habilita el botón "Cambiar imagen"
+  // de inmediato, incluso mientras el OCR todavía está procesando.
+  const reader = new FileReader();
+  reader.onload = (e) => { if(miSesion!==_ocrSession) return; imgPreview.src = e.target.result; preview.style.display = 'block'; };
+  reader.readAsDataURL(file);
+
+  btn.disabled = true;
+  status.textContent = '⏳ Leyendo la imagen, puede tardar unos segundos...';
+  status.style.color = 'var(--text-dim)';
+  resultados.innerHTML = '';
+
+  let candidatos = [], originales = [], errorMsg = '';
+  try {
+    if(typeof Tesseract === 'undefined'){
+      throw new Error('OCR no disponible — sin conexión a la librería');
+    }
+    const imgProcesada = await preprocesarImagenOCR(file);
+    // Límite de tiempo: si Tesseract se cuelga (común con conexión lenta la
+    // primera vez que descarga su diccionario), no queremos que la pantalla
+    // se quede esperando para siempre sin avisar nada.
+    const TIMEOUT_MS = 22000;
+    const timeoutPromise = new Promise((_,reject)=>setTimeout(()=>reject(new Error('tardó demasiado, puede que tu conexión esté lenta')), TIMEOUT_MS));
+    const result = await Promise.race([
+      Tesseract.recognize(imgProcesada, 'spa', {
+        tessedit_char_whitelist: '0123456789',
+        logger: m => {
+          if(miSesion!==_ocrSession) return;
+          if(m.status === 'recognizing text'){
+            status.textContent = `⏳ Leyendo... ${Math.round(m.progress*100)}%`;
+          }
+        }
+      }),
+      timeoutPromise
+    ]);
+    if(miSesion!==_ocrSession) return; // se canceló/cambió de imagen mientras leía
+    const texto = result.data.text;
+    const matches = texto.match(/\b\d{4}\b/g) || [];
+    if(matches.length === 0) throw new Error('no se encontraron números de 4 cifras');
+    candidatos = matches.slice(0, MODO_SORTEO).map(n => String(parseInt(n)%100).padStart(2,'0'));
+    originales = matches.slice(0, MODO_SORTEO);
+  } catch(e){
+    errorMsg = e.message;
+  }
+  if(miSesion!==_ocrSession) return;
+
+  if(candidatos.length>0){
+    mostrarCandidatosOCR(candidatos, originales);
+    status.textContent = `✅ Se encontraron ${candidatos.length} números — revisá y corregí si hace falta antes de cargar`;
+    status.style.color = 'var(--gold)';
+  } else {
+    // El OCR no encontró nada útil — en vez de frenar acá, mostramos una
+    // "placa" simple vacía para completar a mano mirando la foto de arriba.
+    mostrarCandidatosOCR(Array(MODO_SORTEO).fill(''), Array(MODO_SORTEO).fill('—'));
+    status.textContent = `⚠️ No se pudo leer automáticamente (${errorMsg}) — completá los números a mano mirando la foto de arriba`;
+    status.style.color = '#e0b070';
+  }
+  btn.disabled = false;
+}
+
+function mostrarCandidatosOCR(candidatos, originales){
+  const cont = document.getElementById('ocrResultados');
+  cont.innerHTML = `
+    <div style="background:var(--surface);border:1px solid var(--gold3);border-radius:3px;padding:13px;margin-top:4px">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:2px;margin-bottom:4px">PLACA — VERIFICÁ O COMPLETÁ A MANO</div>
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:10px">Mirá la foto de arriba y tocá cualquier casillero para escribir o corregir el número</div>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px">
+        ${candidatos.map((c,i)=>`
+          <div style="display:flex;flex-direction:column;align-items:center;gap:2px">
+            <span style="font-family:'Share Tech Mono',monospace;font-size:9px;color:var(--text-dim)">${originales[i]}</span>
+            <input type="text" maxlength="2" inputmode="numeric" value="${c}" placeholder="00" id="ocrCand_${i}"
+              style="width:38px;text-align:center;padding:6px 0;background:var(--bg2);border:1px solid var(--border);border-radius:2px;color:var(--gold2);font-family:'Share Tech Mono',monospace;font-size:14px;font-weight:bold">
+          </div>`).join('')}
+      </div>
+      <button class="btn btn-gold btn-full btn-sm" onclick="cargarCandidatosOCR(${candidatos.length})">✅ Cargar estos ${candidatos.length} números a la grilla</button>
+    </div>`;
+}
+
+function cargarCandidatosOCR(cantidad){
+  const candidatos=[];
+  for(let i=0;i<cantidad;i++){
+    const raw=(document.getElementById('ocrCand_'+i).value||'').replace(/\D/g,'');
+    candidatos.push(raw.padStart(2,'0').slice(-2));
+  }
+  sSel = [...candidatos];
+  refreshGridCounts('sGrid', sSel);
+  renderSStrip();
+  document.getElementById('ocrResultados').innerHTML = '<div style="color:var(--gold2);font-family:Share Tech Mono,monospace;font-size:13px;text-align:center;padding:8px">✅ Números cargados en la grilla — verificá y procesá el sorteo</div>';
+  showToast('📸 Números cargados desde la captura');
+  sonido('numero');
+}
+
+
+
+// ══════════════════════════════════════
+//  WINNER + COMISIÓN + EFECTO ÉPICO
+// ══════════════════════════════════════
+// ══════════════════════════════════════
+//  DISTRIBUCIÓN DEL POZO
+// ══════════════════════════════════════
+let PCT_GANADOR=70, PCT_ADMIN=15, PCT_OWNER=15;
+let MONTO_MINIMO_ACTIVO=null; // monto mínimo de la Jugada Activa armada por el admin — sugerido, el jugador SÍ puede modificarlo
+const COMISION_DEFAULT=10; // fallback
+
+function cargarPct(){
+  fetch(`${FIREBASE_URL}/${PATH_CONFIG}.json`).then(r=>r.json()).then(data=>{
+    if(data&&data.pctGanador){
+      PCT_GANADOR=data.pctGanador; PCT_ADMIN=data.pctAdmin; PCT_OWNER=data.pctOwner;
+    }
+    const g=document.getElementById('pctGanadorView');
+    const a=document.getElementById('pctAdminView');
+    const o=document.getElementById('pctOwnerView');
+    if(g){ g.textContent=PCT_GANADOR+'%'; a.textContent=PCT_ADMIN+'%'; o.textContent=PCT_OWNER+'%'; }
+    if(data&&data.jugadaActiva){
+      const ja=data.jugadaActiva;
+      if(Array.isArray(ja.sorteos)&&ja.sorteos.length) prefSorteo=ja.sorteos;
+      if(ja.frecuencia) prefFrecuencia=ja.frecuencia;
+      if(ja.numsPorSorteo) MODO_SORTEO=ja.numsPorSorteo;
+      if(ja.montoMinimo) MONTO_MINIMO_ACTIVO=ja.montoMinimo;
+      const ff=document.getElementById('jugadaActivaFechaFin');
+      const hf=document.getElementById('jugadaActivaHoraFin');
+      if(ja.finJugada){
+        const dt=new Date(ja.finJugada);
+        if(ff) ff.value=dt.toISOString().slice(0,10);
+        if(hf) hf.value=dt.toISOString().slice(11,16);
+      }
+      iniciarCuentaFinJugada(ja.finJugada||null);
+      Object.keys(SORTEO_HORARIOS).forEach(x=>{ const el=document.getElementById('sort-'+x); if(el) el.classList.toggle('active', prefSorteo.includes(x)); });
+      ['semanal','diario','completo'].forEach(x=>{ const el=document.getElementById('frec-'+x); if(el) el.classList.toggle('active', x===prefFrecuencia); });
+      [10,20].forEach(n=>{ const el=document.getElementById('numsps-'+n); if(el) el.classList.toggle('active', n===MODO_SORTEO); });
+      const mi=document.getElementById('jugadaActivaMontoInput');
+      if(mi && MONTO_MINIMO_ACTIVO) mi.value=MONTO_MINIMO_ACTIVO;
+      aplicarMontoMinimoSugerido();
+      updateBotStatus();
+    }
+  }).catch(()=>{});
+}
+cargarPct();
+
+// Sugiere el monto mínimo de la Jugada Activa en el campo apuesta del jugador
+// (precarga el valor pero NUNCA lo bloquea — el jugador puede y debe poder cambiarlo,
+// sobre todo en la 2da boleta en adelante, donde es obligatorio modificarlo).
+function aplicarMontoMinimoSugerido(){
+  const ai=document.getElementById('jApuesta');
+  if(!ai) return;
+  if(MONTO_MINIMO_ACTIVO && !ai.value){
+    ai.value=MONTO_MINIMO_ACTIVO;
+  }
+  ai.readOnly=false;
+  ai.style.opacity='1';
+}
+
+function setNumsPorSorteo(n){
+  MODO_SORTEO=n;
+  [10,20].forEach(x=>{ const el=document.getElementById('numsps-'+x); if(el) el.classList.toggle('active', x===n); });
+  updateBotStatus();
+}
+
+async function guardarJugadaActiva(){
+  const montoInput=document.getElementById('jugadaActivaMontoInput');
+  const v=parseFloat(montoInput.value);
+  const status=document.getElementById('jugadaActivaStatus');
+  if(!v||v<=0){ status.textContent='Ingresá un monto mínimo válido.'; status.style.color='#e08080'; return; }
+  if(!prefSorteo||!prefSorteo.length){ status.textContent='Elegí al menos un sorteo.'; status.style.color='#e08080'; return; }
+  const ff=document.getElementById('jugadaActivaFechaFin');
+  const hf=document.getElementById('jugadaActivaHoraFin');
+  let finJugada=null;
+  if(ff && ff.value){
+    finJugada=new Date(ff.value+'T'+(hf&&hf.value?hf.value:'23:59')+':00').toISOString();
+  }
+  const jugadaActiva={
+    frecuencia: prefFrecuencia,
+    sorteos: prefSorteo,
+    numsPorSorteo: MODO_SORTEO,
+    montoMinimo: v,
+    finJugada,
+    actualizada: new Date().toISOString()
+  };
+  try{
+    await fetch(`${FIREBASE_URL}/${PATH_CONFIG}.json`,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({jugadaActiva})});
+    MONTO_MINIMO_ACTIVO=v;
+    aplicarMontoMinimoSugerido();
+    iniciarCuentaFinJugada(finJugada);
+    const detalleSorteos=prefSorteo.map(s=>SORTEO_HORARIOS[s]?.label||s).join(', ');
+    status.textContent=`✅ Jugada Activa guardada — ${detalleSorteos} · ${MODO_SORTEO} núm/sorteo · mín. $${v.toLocaleString('es-AR')}`;
+    status.style.color='var(--gold)';
+    showToast('🎯 Jugada Activa actualizada para toda la sala');
+    guardarConfigBot();
+    updateBotStatus();
+  }catch(e){
+    status.textContent='No se pudo guardar — probá de nuevo.';
+    status.style.color='#e08080';
+  }
+}
+
+function showWinner(p,total,day){
+  const premioGanador=Math.round(total*(PCT_GANADOR/100));
+  const comisionAdmin=Math.round(total*(PCT_ADMIN/100));
+  const comisionOwner=Math.round(total*(PCT_OWNER/100));
+
+  document.getElementById('winName').textContent=p.nombre;
+  document.getElementById('winDetail').textContent=`Completó sus 10 números en el Día ${day}`;
+  document.getElementById('winPrize').textContent=`$${premioGanador.toLocaleString('es-AR')}`;
+  const prizeLabel=document.querySelector('.win-prize-label');
+  if(prizeLabel) prizeLabel.textContent=`Tu Premio 🏆`;
+
+  // Placa pública: nada de porcentajes ni cuánto se queda el admin/owner —
+  // solo un mensaje alentador. El desglose completo queda privado, en la
+  // pestaña Admin (historial de comisiones).
+  const winBox=document.querySelector('.win-box');
+  let distDiv=document.getElementById('winDistribucion');
+  if(!distDiv){distDiv=document.createElement('div');distDiv.id='winDistribucion';winBox.appendChild(distDiv);}
+  distDiv.innerHTML=`
+    <div style="background:var(--surface2);border:1px solid var(--gold3);border-radius:8px;padding:22px 18px;margin-bottom:12px;text-align:center">
+      <div style="font-family:'Lato',sans-serif;font-size:17px;color:var(--cream);line-height:1.55">
+        🍀 La suerte estuvo de tu lado hoy.<br>¡Disfrutá tu premio y nos vemos en el próximo sorteo!
+      </div>
+    </div>`;
+
+  document.body.classList.add('winner-mode');
+  document.getElementById('winOverlay').classList.add('show');
+  launchConfetti();
+  if(navigator.vibrate) navigator.vibrate([500,200,500,200,1000]);
+  registrarComision(p,total,premioGanador,comisionAdmin,comisionOwner);
+}
+
+function closeWin(){
+  document.getElementById('winOverlay').classList.remove('show');
+  document.body.classList.remove('winner-mode');
+}
+
+async function registrarComision(ganador,pozo,premioGanador,comisionAdmin,comisionOwner){
+  const reg={
+    fecha:new Date().toLocaleDateString('es-AR'),
+    hora:new Date().toLocaleTimeString('es-AR'),
+    ganador:ganador.nombre, pozo, premioGanador,
+    comisionAdmin, comisionOwner,
+    pctGanador:PCT_GANADOR, pctAdmin:PCT_ADMIN, pctOwner:PCT_OWNER,
+    estado:'pendiente'
+  };
+  try { await fetch(`${FIREBASE_URL}/${PATH_COM}.json`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(reg)}); } catch(e){}
+  renderHistorialComisiones();
+}
+async function renderHistorialComisiones(){
+  const cont=document.getElementById('historialComisiones');
+  if(!cont) return;
+  try{
+    const r=await fetch(`${FIREBASE_URL}/${PATH_COM}.json`);
+    const data=await r.json();
+    if(!data){ cont.innerHTML='<div class="empty">Todavía no hubo ganadores.</div>'; return; }
+    const regs=Object.values(data).reverse(); // más reciente primero
+    cont.innerHTML=regs.map(c=>`
+      <div style="background:var(--bg2);border:1px solid var(--border);border-radius:4px;padding:11px 13px;margin-bottom:7px">
+        <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);margin-bottom:5px">${c.fecha} ${c.hora} · Ganó ${escHtmlLocal(c.ganador)}</div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text);display:flex;justify-content:space-between"><span>Pozo total</span><b style="color:var(--gold)">$${(c.pozo||0).toLocaleString('es-AR')}</b></div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text);display:flex;justify-content:space-between"><span>Te queda a vos (${c.pctAdmin}%)</span><b style="color:#90ee90">$${(c.comisionAdmin||0).toLocaleString('es-AR')}</b></div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:12px;color:var(--text);display:flex;justify-content:space-between"><span>A abonar al panel (${c.pctOwner}%)</span><b style="color:#ffaaaa">$${(c.comisionOwner||0).toLocaleString('es-AR')}</b></div>
+      </div>`).join('');
+  }catch(e){ cont.innerHTML='<div class="empty">No se pudo cargar — revisá tu conexión.</div>'; }
+}
+function escHtmlLocal(s){ return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+
+function setFrecuencia(f){
+  prefFrecuencia=f;
+  ['semanal','diario','completo'].forEach(x=>{ const el=document.getElementById('frec-'+x); if(el) el.classList.toggle('active',x===f); });
+  localStorage.setItem('lp_frecuencia',f);
+  guardarConfigBot();
+  updateBotStatus();
+}
+function toggleSorteo(s){
+  if(!Array.isArray(prefSorteo)) prefSorteo = prefSorteo ? [prefSorteo] : [];
+  const i = prefSorteo.indexOf(s);
+  if(i>-1){
+    if(prefSorteo.length===1){ showToast('⚠️ Debés dejar al menos un sorteo activo'); return; }
+    prefSorteo.splice(i,1);
+  } else {
+    prefSorteo.push(s);
+  }
+  Object.keys(SORTEO_HORARIOS).forEach(x=>{ const el=document.getElementById('sort-'+x); if(el) el.classList.toggle('active', prefSorteo.includes(x)); });
+  localStorage.setItem('lp_sorteo', JSON.stringify(prefSorteo));
+  guardarConfigBot();
+  updateBotStatus();
+}
+function guardarConfigBot(){
+  if(!SALA_ID || SALA_ID==='default') return;
+  const sorteosGuardar = Array.isArray(prefSorteo) ? prefSorteo : [prefSorteo||'nocturna'];
+  fetch(`${FIREBASE_URL}/panel_salas.json`)
+    .then(r=>r.json())
+    .then(salas=>{
+      if(!salas) return;
+      const entry = Object.entries(salas).find(([k,v])=>v.sala===SALA_ID);
+      if(!entry) return;
+      const [key] = entry;
+      return fetch(`${FIREBASE_URL}/panel_salas/${key}.json`,{
+        method:'PATCH',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({
+          sorteo: sorteosGuardar,
+          frecuencia: prefFrecuencia || 'diario',
+          ultimaConfig: new Date().toISOString()
+        })
+      });
+    })
+    .then(()=>showToast('✅ Config del bot guardada'))
+    .catch(()=>{});
+}
+function updateBotStatus(){
+  const el=document.getElementById('botStatus'); if(!el) return;
+  const lista = Array.isArray(prefSorteo) ? prefSorteo : [prefSorteo||'nocturna'];
+  const detalle = lista.map(s=>`${SORTEO_HORARIOS[s]?.label||s} (${SORTEO_HORARIOS[s]?.hora||'?'}hs)`).join(' · ');
+  const cantNums = MODO_SORTEO || 10;
+  const totalNumsDia = lista.length * cantNums;
+  if(prefFrecuencia==='completo') el.innerHTML=`🤖 Los 5 sorteos diarios: 09:00 · 11:00 · 14:00 · 17:00 · 21:00hs`;
+  else if(prefFrecuencia==='diario') el.innerHTML=`🤖 ${detalle} todos los días — ${totalNumsDia} números/día`;
+  else el.innerHTML=`🤖 ${detalle} — frecuencia semanal — ${totalNumsDia} números/jugada`;
+}
+
+// ══════════════════════════════════════
+//  CAMBIO CONTRASEÑA EN VIVO (login real — Firebase Auth)
+// ══════════════════════════════════════
+async function cambiarPassword(){
+  const p1=document.getElementById('newPass1').value;
+  const p2=document.getElementById('newPass2').value;
+  const al=document.getElementById('passAlert');
+  if(!p1||p1.length<6){showAlert(al,'err','Mínimo 6 caracteres.');return;}
+  if(p1!==p2){showAlert(al,'err','Las contraseñas no coinciden.');return;}
+  if(!ADMIN_ID_TOKEN){showAlert(al,'err','Tu sesión venció — salí y volvé a entrar para cambiarla.');return;}
+  try{
+    const r=await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:update?key=${FIREBASE_API_KEY}`,{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({idToken:ADMIN_ID_TOKEN,password:p1,returnSecureToken:true})
+    });
+    const data=await r.json();
+    if(!r.ok) throw new Error(data?.error?.message||'auth_error');
+    ADMIN_ID_TOKEN=data.idToken; ADMIN_REFRESH_TOKEN=data.refreshToken;
+  }catch(e){
+    showAlert(al,'err','No se pudo cambiar la contraseña. Probá de nuevo.');
+    return;
+  }
+  document.getElementById('newPass1').value='';
+  document.getElementById('newPass2').value='';
+  showAlert(al,'ok','✅ Contraseña cambiada de verdad — ya no queda guardada en texto plano en ningún lado.');
+  showToast('🔑 Contraseña actualizada');
+}
+
+// ══════════════════════════════════════
+//  NUEVA PARTIDA
+// ══════════════════════════════════════
+async function nuevaPartida(){
+  if(!confirm('¿Iniciar nueva partida? Se borrará todo.')) return;
+  players=[]; draws=[]; gameOver=false; jSel=[]; sSel=[];
+  await guardarEstado();
+  refreshGridCounts('jGrid',jSel); renderJStrip();
+  refreshGridCounts('sGrid',sSel); renderSStrip();
+  updatePozo(); renderTablero(); updateAdminNotif(); renderHistorial();
+  document.getElementById('dayLabel').textContent='Día 0';
+  document.getElementById('winOverlay').classList.remove('show');
+  showToast('🔄 Nueva partida iniciada');
+  goTab('inicio');
+}
+
+function launchConfetti(){
+  const cols=['#c9a84c','#e8c96a','#8a6f2e','#f5e4a0','#4a3c18','#fff'];
+  for(let i=0;i<100;i++){
+    const el=document.createElement('div'); el.className='confetti';
+    el.style.cssText=`left:${Math.random()*100}vw;top:-20px;background:${cols[~~(Math.random()*cols.length)]};animation-delay:${Math.random()*2.5}s;animation-duration:${3+Math.random()*2}s;border-radius:${Math.random()>.5?'50%':'1px'};width:${5+Math.random()*7}px;height:${8+Math.random()*10}px;`;
+    document.body.appendChild(el);
+    setTimeout(()=>el.remove(),6000);
+  }
+}
+
+// ══════════════════════════════════════
+//  UTILS
+// ══════════════════════════════════════
+// Comisión del vendedor — ya no se usa (el reparto real es PCT_ADMIN+PCT_OWNER)
+
+function updatePozo(){
+  const activos=players.filter(p=>p.status==='active');
+  const total=activos.reduce((s,p)=>s+p.apuesta,0);
+  // El premio del ganador SIEMPRE se calcula con PCT_GANADOR directo (igual que registrarComision),
+  // así lo que ve el jugador coincide exactamente con lo que se reparte de verdad,
+  // sin depender de que PCT_GANADOR+PCT_ADMIN+PCT_OWNER sumen 100.
+  const neto=Math.round(total*(PCT_GANADOR/100));
+  const fmtNeto='$ '+neto.toLocaleString('es-AR');
+  const mostrarPozo=activos.length>=2; // recién a partir de la 2da boleta se muestra el monto
+  const elVal=document.getElementById('pozoVal');
+  const elBanner=document.getElementById('pozoBanner');
+  if(elVal) elVal.textContent=mostrarPozo?fmtNeto:'$ —';
+  if(elBanner) elBanner.textContent=mostrarPozo?fmtNeto:'$ —';
+  const elBoletas=document.getElementById('boletasCount');
+  if(elBoletas) elBoletas.textContent=activos.length;
+  const elBannerBoletas=document.getElementById('pozoBannerBoletas');
+  if(elBannerBoletas) elBannerBoletas.textContent=activos.length;
+  const elPozoTent=document.getElementById('pozoTentador');
+  if(elPozoTent) elPozoTent.textContent=mostrarPozo?('$ '+neto.toLocaleString('es-AR')):'$ —';
+  const elBoletasTent=document.getElementById('boletasTentador');
+  if(elBoletasTent) elBoletasTent.textContent=activos.length+' boleta'+(activos.length!==1?'s':'')+' jugando · ¿La tuya?';
+  actualizarPropuesta(neto, activos.length);
+}
+
+function actualizarPropuesta(neto, boletas){
+  const el=document.getElementById('propuestaTexto');
+  if(!el) return;
+  if(boletas===0){
+    el.innerHTML='Sé el <strong>primero en jugar</strong> — el pozo empieza a crecer con vos 🎯';
+    return;
+  }
+  if(boletas===1){
+    el.innerHTML='Ya hay <strong>1 boleta jugando</strong>. En cuanto entre la segunda, vas a ver el pozo creciendo en vivo 👀';
+    return;
+  }
+  const fmt=n=>'$'+n.toLocaleString('es-AR');
+  if(neto<50000){
+    el.innerHTML='Ya hay <strong>'+boletas+' boleta'+(boletas>1?'s':'')+' jugando</strong> — el pozo va sumando. ¡Metete!';
+  } else if(neto<200000){
+    el.innerHTML='El pozo ya es <strong>'+fmt(neto)+'</strong> y sigue creciendo. Con una sola boleta podés ganar todo. ¿Te lo perdés?';
+  } else if(neto<500000){
+    el.innerHTML='<strong>'+fmt(neto)+'</strong> en juego. ¿Cuánto vale tu boleta comparado con esto? Una jugada te puede cambiar el día 🏆';
+  } else {
+    el.innerHTML='🔥 El pozo llegó a <strong>'+fmt(neto)+'</strong>. Si ganás hoy, ¿qué harías con esa plata?';
+  }
+}
+
+// ══════════════════════════════════════
+//  COUNTDOWN REGRESIVO
+// ══════════════════════════════════════
+let finJugadaInterval=null;
+function iniciarCuentaFinJugada(finJugadaISO){
+  const wrap=document.getElementById('finJugadaWrap');
+  const el=document.getElementById('finJugadaCountdown');
+  if(finJugadaInterval){ clearInterval(finJugadaInterval); finJugadaInterval=null; }
+  if(!finJugadaISO || !wrap || !el){ if(wrap) wrap.style.display='none'; return; }
+  const target=new Date(finJugadaISO).getTime();
+  function tick(){
+    const diff=target-Date.now();
+    if(diff<=0){
+      el.textContent='¡CERRADA!';
+      wrap.style.display='inline-block';
+      clearInterval(finJugadaInterval);
+      return;
+    }
+    const d=Math.floor(diff/86400000);
+    const h=Math.floor((diff%86400000)/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    el.textContent = d>0 ? `${d}d ${h}h ${m}m` : `${h}h ${m}m ${s}s`;
+    wrap.style.display='inline-block';
+  }
+  tick();
+  finJugadaInterval=setInterval(tick,1000);
+}
+async function quitarFinJugadaActiva(){
+  const ff=document.getElementById('jugadaActivaFechaFin');
+  const hf=document.getElementById('jugadaActivaHoraFin');
+  if(ff) ff.value=''; if(hf) hf.value='';
+  try{
+    await fetch(`${FIREBASE_URL}/${PATH_CONFIG}/jugadaActiva/finJugada.json`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(null)});
+  }catch(e){}
+  iniciarCuentaFinJugada(null);
+  showToast('Cuenta regresiva quitada');
+}
+
+let countdownInterval=null, countdownTarget=null;
+
+function setCountdown(timeStr){
+  if(!timeStr) return;
+  const [h,m]=timeStr.split(':').map(Number);
+  const now=new Date();
+  const target=new Date();
+  target.setHours(h,m,0,0);
+  if(target<=now) target.setDate(target.getDate()+1);
+  countdownTarget=target;
+  localStorage.setItem('lp_countdown',target.getTime());
+  startCountdown();
+}
+
+function resetCountdown(){
+  clearInterval(countdownInterval);
+  countdownTarget=null;
+  localStorage.removeItem('lp_countdown');
+  const el=document.getElementById('countdownTimer');
+  el.textContent='--:--:--';
+  el.classList.remove('urgente');
+}
+
+function startCountdown(){
+  clearInterval(countdownInterval);
+  countdownInterval=setInterval(()=>{
+    if(!countdownTarget){ clearInterval(countdownInterval); return; }
+    const diff=countdownTarget-new Date();
+    if(diff<=0){
+      const el=document.getElementById('countdownTimer');
+      el.textContent='⛔ CERRADO';
+      el.classList.add('urgente');
+      clearInterval(countdownInterval);
+      showToast('⛔ ¡Apuestas cerradas!');
+      sonido('sorteo');
+      return;
+    }
+    const h=Math.floor(diff/3600000);
+    const m=Math.floor((diff%3600000)/60000);
+    const s=Math.floor((diff%60000)/1000);
+    const el=document.getElementById('countdownTimer');
+    el.textContent=`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+    // Sincronizar preview admin
+    const prev=document.getElementById('cdAdminPreview');
+    if(prev) prev.textContent=el.textContent;
+    // Urgente si quedan menos de 5 minutos
+    el.classList.toggle('urgente', diff<300000);
+    // Sonido cada minuto en los últimos 5
+    if(diff<300000 && s===0) sonido('numero');
+  },1000);
+}
+
+// Restaurar countdown si estaba activo
+const savedCountdown=localStorage.getItem('lp_countdown');
+if(savedCountdown){
+  countdownTarget=new Date(parseInt(savedCountdown));
+  if(countdownTarget>new Date()) startCountdown();
+  else localStorage.removeItem('lp_countdown');
+}
+function showAlert(el,type,msg){
+  el.className=`alert alert-${type==='err'?'err':'ok'} show`;
+  el.textContent=msg;
+  if(type==='err') setTimeout(()=>el.classList.remove('show'),3500);
+}
+function notificarAdmin(msg){
+  try {
+    const ctx=new(window.AudioContext||window.webkitAudioContext)();
+    const play=(f,s,d)=>{const o=ctx.createOscillator(),g=ctx.createGain();o.connect(g);g.connect(ctx.destination);o.frequency.value=f;o.type='sine';g.gain.setValueAtTime(0.25,ctx.currentTime+s);g.gain.exponentialRampToValueAtTime(0.001,ctx.currentTime+s+d);o.start(ctx.currentTime+s);o.stop(ctx.currentTime+s+d);};
+    // Ding cortito tipo email — una sola vez, sin vibración
+    play(988,0,0.12);play(1318,0.1,0.18);
+  } catch(e){}
+  const old=document.querySelector('.toast-big');if(old)old.remove();
+  const t=document.createElement('div');t.className='toast-big';
+  t.innerHTML=`<div style="font-size:26px;margin-bottom:5px">📩</div><div>${msg}</div>`;
+  document.body.appendChild(t);
+  setTimeout(()=>{t.style.opacity='0';setTimeout(()=>t.remove(),400);},5000);
+  const badge=document.querySelector('#tab-admin .notif');
+  if(badge){ badge.classList.add('notif-flash'); setTimeout(()=>badge.classList.remove('notif-flash'),1800); }
+}
+function checkFirebaseExpiry(){ /* Firebase Spark es gratis, sin vencimiento */ }
+
+// ══════════════════════════════════════
+//  LEER SORTEO AUTOMÁTICO DE FIREBASE
+//  (queda lista por si en el futuro se agrega
+//   un bot real con navegador headless; hoy
+//   no hay ningún proceso que escriba acá)
+// ══════════════════════════════════════
+async function checkSorteoAuto(){
+  if(!adminLogged) return;
+  try {
+    const res=await fetch(`${FIREBASE_URL}/${PATH_SORTEO}.json`);
+    const data=await res.json();
+    if(!data||!data.numeros||!data.auto||data.procesado) return;
+    sSel=[...data.numeros];
+    refreshGridCounts('sGrid',sSel); renderSStrip();
+    await fetch(`${FIREBASE_URL}/${PATH_SORTEO}/procesado.json`,{method:'PUT',body:'true',headers:{'Content-Type':'application/json'}});
+    const statusEl=document.getElementById('ocrStatus');
+    if(statusEl){ statusEl.textContent=`✅ Sorteo automático cargado a las ${data.hora} — verificá y procesá`; statusEl.style.color='var(--gold)'; }
+    notificarAdmin('🎰 Sorteo automático listo — revisá y procesá!');
+    sonido('sorteo');
+  } catch(e){}
+}
+setInterval(checkSorteoAuto, 3*60*1000);
+document.addEventListener('contextmenu',e=>e.preventDefault());
+
+// ── MARQUESINA — actualizar con sorteos ──
+function actualizarMarquesina(draws) {
+  const track = document.getElementById('marquesinaTrack');
+  if (!track || !draws || !draws.length) return;
+  const ultimo = draws[draws.length - 1];
+  const nums = ultimo.numbers ? ultimo.numbers.join(' · ') : '';
+  track.textContent = `🎰 DÍA ${ultimo.day} — NÚMEROS: ${nums} · 🏆 UN SOLO GANADOR · 💰 TODO EL POZO · 🎲 JUGÁ CON RESPONSABILIDAD · 🎰 DÍA ${ultimo.day} — ${nums} · `;
+}
+document.addEventListener('keydown',e=>{if(e.key==='F12'||(e.ctrlKey&&e.shiftKey&&['I','J','C'].includes(e.key))||(e.ctrlKey&&e.key==='U'))e.preventDefault();});
+
+// PWA
+if('serviceWorker' in navigator){
+  const sw=`self.addEventListener('install',e=>self.skipWaiting());self.addEventListener('fetch',e=>e.respondWith(fetch(e.request).catch(()=>caches.match(e.request))));`;
+  const blob=new Blob([sw],{type:'application/javascript'});
+  navigator.serviceWorker.register(URL.createObjectURL(blob)).catch(()=>{});
+}
+</script>
+<!-- MODAL APARIENCIA JUGADOR -->
+<div id="modalApariencia" style="display:none;position:fixed;inset:0;background:rgba(2,2,2,0.88);z-index:300;align-items:flex-end;justify-content:center">
+  <div style="background:var(--surface);border:1px solid var(--gold3);border-top:2px solid var(--gold);border-radius:12px 12px 0 0;padding:24px 20px 32px;width:100%;max-width:480px;animation:panelIn 0.3s ease">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:18px">
+      <div style="font-family:'Bebas Neue',cursive;font-size:22px;color:var(--gold);letter-spacing:3px">🎨 Apariencia</div>
+      <button onclick="cerrarApariencia()" style="background:none;border:none;color:var(--text-dim);font-size:22px;cursor:pointer;padding:4px">✕</button>
+    </div>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:3px;margin-bottom:8px">TEMA DE COLOR</div>
+    <div class="pref-row" style="margin-bottom:18px">
+      <div class="pref-btn active" onclick="setTema('')"        id="atema-negro"   >⬛ Negro/Oro</div>
+      <div class="pref-btn"        onclick="setTema('verde')"   id="atema-verde"   >🟢 Verde Casino</div>
+      <div class="pref-btn"        onclick="setTema('azul')"    id="atema-azul"    >🔵 Azul Noche</div>
+      <div class="pref-btn"        onclick="setTema('moderna')" id="atema-moderna" >🩵 Moderno</div>
+      <div class="pref-btn"        onclick="setTema('vibrante')"id="atema-vibrante">🧡 Vibrante</div>
+    </div>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:3px;margin-bottom:8px">TAMAÑO DE VISTA</div>
+    <div class="pref-row" style="margin-bottom:18px">
+      <div class="pref-btn"        onclick="setVista('compacta')" id="avista-compacta">🔡 Compacta</div>
+      <div class="pref-btn active"  onclick="setVista('')"         id="avista-normal"  >📄 Normal</div>
+      <div class="pref-btn"        onclick="setVista('grande')"   id="avista-grande"  >🔠 Grande</div>
+      <div class="pref-btn"        onclick="setVista('enorme')"   id="avista-enorme"  >🔝 Enorme</div>
+    </div>
+    <div style="font-family:'Share Tech Mono',monospace;font-size:10px;color:var(--text-dim);letter-spacing:3px;margin-bottom:8px">MELODÍAS</div>
+    <div class="pref-row" style="margin-bottom:20px">
+      <div class="pref-btn active" onclick="setSonido('casino')" id="ason-casino" >🎰 Casino</div>
+      <div class="pref-btn"        onclick="setSonido('clasico')"id="ason-clasico">🎺 Clásico</div>
+      <div class="pref-btn"        onclick="setSonido('silencio')"id="ason-silencio">🔇 Silencio</div>
+    </div>
+    <button class="btn btn-gold btn-full btn-clean" onclick="cerrarApariencia()">Listo ✓</button>
+  </div>
+</div>
+
+</body>
+</html>
